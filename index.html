@@ -9,6 +9,15 @@
     <link rel="icon" type="image/png" href="./public/favicon/favicon-transparent-noir.png" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXGTEDMLLJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KXGTEDMLLJ');
+    </script>
 </head>
 
 <body class="home">
@@ -38,37 +47,37 @@
             <!-- Français -->
             <button class="lang-btn active" data-lang="fr" title="Français">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
-                    <rect width="1" height="2" fill="#002395"/>
-                    <rect x="1" width="1" height="2" fill="#fff"/>
-                    <rect x="2" width="1" height="2" fill="#ED2939"/>
+                    <rect width="1" height="2" fill="#002395" />
+                    <rect x="1" width="1" height="2" fill="#fff" />
+                    <rect x="2" width="1" height="2" fill="#ED2939" />
                 </svg>
             </button>
 
             <!-- Anglais -->
             <button class="lang-btn" data-lang="en" title="English">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
-                    <rect width="60" height="30" fill="#012169"/>
-                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
-                    <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
-                    <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
+                    <rect width="60" height="30" fill="#012169" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" />
+                    <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10" />
+                    <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6" />
                 </svg>
             </button>
 
             <!-- Arabe (droite vers gauche) -->
             <button class="lang-btn" data-lang="ar" title="العربية">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
-                    <rect width="3" height="2" fill="#E70013"/>
-                    <circle cx="1.3" cy="1" r="0.45" fill="none" stroke="#fff" stroke-width="0.12"/>
-                    <polygon points="1.6,1 1.75,0.6 1.9,1 1.5,0.75 1.95,0.75" fill="#fff"/>
+                    <rect width="3" height="2" fill="#E70013" />
+                    <circle cx="1.3" cy="1" r="0.45" fill="none" stroke="#fff" stroke-width="0.12" />
+                    <polygon points="1.6,1 1.75,0.6 1.9,1 1.5,0.75 1.95,0.75" fill="#fff" />
                 </svg>
             </button>
 
             <!-- Japonais -->
             <button class="lang-btn" data-lang="ja" title="日本語">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
-                    <rect width="3" height="2" fill="#fff"/>
-                    <circle cx="1.5" cy="1" r="0.6" fill="#BC002D"/>
+                    <rect width="3" height="2" fill="#fff" />
+                    <circle cx="1.5" cy="1" r="0.6" fill="#BC002D" />
                 </svg>
             </button>
 
@@ -76,9 +85,9 @@
 
         <!-- liens de navigation principaux -->
         <ul class="nav-links" id="nav-list">
-            <li><a href="./projets.html"  data-i18n="nav_projects">Projets</a></li>
+            <li><a href="./projets.html" data-i18n="nav_projects">Projets</a></li>
             <li><a href="./a-propos.html" data-i18n="nav_about">À propos</a></li>
-            <li><a href="./contact.html"  data-i18n="nav_contact">Contact</a></li>
+            <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
 
     </nav>
@@ -99,8 +108,9 @@
 
     <!-- Scripts : ordre obligatoire (translations -> lang -> script) -->
     <script src="./public/js/translations.js"></script>
-    <script src="./public/js/lang.js"></script>         
-    <script src="./public/js/script.js"></script>       <!-- Animations et interactions -->
+    <script src="./public/js/lang.js"></script>
+    <script src="./public/js/script.js"></script> <!-- Animations et interactions -->
 
 </body>
+
 </html>
