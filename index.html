@@ -111,6 +111,30 @@
     <script src="./public/js/lang.js"></script>
     <script src="./public/js/script.js"></script> <!-- Animations et interactions -->
 
+
+    <!-- Bannière de consentement cookies (RGPD) -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
+        <div class="cookie-content">
+            <h2 id="cookie-title" class="cookie-title">Cookies & confidentialité</h2>
+            <p class="cookie-text">
+                Ce site utilise des cookies de mesure d'audience (Google Analytics) pour comprendre
+                comment vous utilisez le site et améliorer votre expérience.
+                Aucune donnée personnelle n'est revendue. Vous pouvez modifier votre choix à tout moment.
+            </p>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Refuser</button>
+                <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Accepter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lien discret pour modifier son choix -->
+    <button id="cookie-settings" class="cookie-settings" aria-label="Modifier mes préférences cookies" hidden>
+        🍪 Cookies
+    </button>
+
+    <script src="./public/js/cookies.js"></script>
+
 </body>
 
 </html>

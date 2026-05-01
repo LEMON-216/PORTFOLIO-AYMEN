@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets - Portfolio Aymen</title>
     <link rel="icon" type="image/png" href="./public/favicon/favicon-transparent-noir.png" sizes="32x32">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google tag (gtag.js) -->
@@ -227,6 +227,29 @@
     <script src="./public/js/translations.js"></script>
     <script src="./public/js/lang.js"></script>
     <script src="./public/js/script.js"></script>
+
+    <!-- Bannière de consentement cookies (RGPD) -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
+        <div class="cookie-content">
+            <h2 id="cookie-title" class="cookie-title">Cookies & confidentialité</h2>
+            <p class="cookie-text">
+                Ce site utilise des cookies de mesure d'audience (Google Analytics) pour comprendre
+                comment vous utilisez le site et améliorer votre expérience.
+                Aucune donnée personnelle n'est revendue. Vous pouvez modifier votre choix à tout moment.
+            </p>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Refuser</button>
+                <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Accepter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lien discret pour modifier son choix -->
+    <button id="cookie-settings" class="cookie-settings" aria-label="Modifier mes préférences cookies" hidden>
+        🍪 Cookies
+    </button>
+
+    <script src="./public/js/cookies.js"></script>
 
 </body>
 
