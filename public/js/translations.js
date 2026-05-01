@@ -25,7 +25,7 @@ const translations = {
 
         about_title1: "Passionné par le",
         about_title2: "Minimalisme",
-        about_text: "Chef de projet digital et développeur web en reconversion professionnelle. Je mets aujourd'hui au service du digital un parcours solide en recherche — création et analyse des pratiques culturelles. Je combine compétences techniques en développement web, gestion de projet digital et vision artistique pour concevoir des expériences numériques centrées sur l'utilisateur.",
+        about_text: "Chercheur postdoctoral devenu chef de projet digital et développeur web, je mets au service du numérique un regard analytique forgé par des années de recherche en sciences humaines. Anthropologue de formation, développeur web par passion, je transpose dans le digital une décennie d'étude des pratiques culturelles. Mon approche associe rigueur méthodologique, sensibilité culturelle et maîtrise technique pour concevoir des expériences numériques pensées pour l'utilisateur.",
         about_cv_digital: "CV Digital",
         about_cv_artistic: "CV Artistique",
         about_cv_graphic: "CV Graphique",
@@ -64,7 +64,7 @@ const translations = {
 
         about_title1: "Passionate about",
         about_title2: "Minimalism",
-        about_text: "Digital project manager and web developer in professional transition. I bring to the digital world a solid background in research — creation and analysis of cultural practices. I combine technical skills in web development, digital project management and artistic vision to design user-centered digital experiences.",
+        about_text: "Having transitioned from a postdoctoral researcher to a digital project manager and web developer, I bring to the digital sphere an analytical perspective shaped by years of research in the humanities. Trained as an anthropologist and a web developer by passion, I apply a decade of research into cultural practices to the digital realm. My approach combines methodological rigour, cultural sensitivity and technical expertise to design user-centred digital experiences.",
         about_cv_digital: "Digital CV",
         about_cv_artistic: "Artistic CV",
         about_cv_graphic: "Graphic CV",
@@ -103,7 +103,7 @@ const translations = {
 
         about_title1: "شغوف بـ",
         about_title2: "البساطة",
-        about_text: "مدير مشاريع رقمية ومطوّر ويب في مرحلة تحوّل مهني. أضع اليوم في خدمة العالم الرقمي مساراً أكاديمياً راسخاً في البحث — إبداع وتحليل الممارسات الثقافية. أجمع بين الكفاءات التقنية في تطوير الويب وإدارة المشاريع الرقمية والرؤية الفنية لتصميم تجارب رقمية تمحورت حول المستخدم.",
+        about_text: "بصفتي باحثًا ما بعد الدكتوراه تحول إلى مدير مشاريع رقمية ومطور ويب، أضع في خدمة المجال الرقمي نظرة تحليلية صقلتها سنوات من البحث في العلوم الإنسانية. بصفتي أنثروبولوجيًا من حيث التخصص ومطور ويب بدافع الشغف، أنقل إلى المجال الرقمي خبرة عقد من الزمن في دراسة الممارسات الثقافية. تجمع منهجيتي بين الدقة المنهجية والحساسية الثقافية والإتقان التقني لتصميم تجارب رقمية مصممة خصيصًا للمستخدم.",
         about_cv_digital: "السيرة الرقمية",
         about_cv_artistic: "السيرة الفنية",
         about_cv_graphic: "السيرة الجرافيكية",
@@ -142,7 +142,7 @@ const translations = {
 
         about_title1: "情熱を持つ",
         about_title2: "ミニマリズム",
-        about_text: "デジタルプロジェクトマネージャー兼ウェブ開発者として転職中。文化的実践の研究・創造・分析における確かな経歴をデジタルの世界に活かしています。ウェブ開発の技術力、デジタルプロジェクト管理、芸術的ビジョンを組み合わせ、ユーザー中心のデジタル体験を設計します。",
+        about_text: "博士研究員を経て、現在はデジタルプロジェクトマネージャー兼ウェブ開発者として、人文科学分野での長年の研究で培った分析的視点をデジタル分野に活かしています。人類学を専門とし、ウェブ開発を情熱として取り組む私は、10年にわたる文化実践の研究経験をデジタル領域へと応用しています。私のアプローチは、方法論的な厳密さ、文化的感性、そして技術的な熟練度を融合させ、ユーザー中心のデジタル体験を設計することを目指しています。",
         about_cv_digital: "デジタル履歴書",
         about_cv_artistic: "芸術履歴書",
         about_cv_graphic: "グラフィック履歴書",
