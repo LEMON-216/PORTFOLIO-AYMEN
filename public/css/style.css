@@ -1,0 +1,939 @@
+/* ⭐⭐⭐⭐ Feuille de styles principale du portfolio ⭐⭐⭐⭐ */
+
+/* ⭐⭐ 1. VARIABLES CSS GLOBALES (:root) ⭐⭐ */
+:root {
+  /* Couleurs des réseaux sociaux */
+  --color-instagram: rgb(255, 115, 1);
+  --color-youtube: red;
+  --color-tiktok: #ff0050;
+  --color-linkedin: #0077b4;
+
+  /* Palette principale */
+  --bg-dark: #0a0a0a; /* Fond sombre global */
+  --text-light: #e0e0e0;
+  --accent-neon: #ffffff;
+
+  /* Durées de transitions réutilisables */
+  --transition-fast: 0.1s;
+  --transition-smooth: 0.5s ease;
+
+  /* Typographies / Polices */
+  --font-title: "Arelv", "Helvetica Neue", sans-serif; /* Titres */
+  --font-body:
+    "Satoshi-Regular", "Helvetica Neue", Arial, sans-serif; /* Corps de texte */
+}
+
+/* ⭐⭐ 2. POLICES PERSONNALISÉES (@font-face) ⭐⭐ */
+@font-face {
+  font-family: "Arelv";
+  src: url("../font/arelv/Arelv.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Famille Satoshi — graisse légère (300) */
+@font-face {
+  font-family: "Satoshi-Light";
+  src: url("../font/Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* Famille Satoshi — graisse normale (400), utilisée pour le corps de texte */
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("../font/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Famille Satoshi — graisse medium (500) */
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../font/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* Famille Satoshi — graisse bold (700) */
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../font/Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Famille Satoshi — graisse black (900) */
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../font/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf")
+    format("opentype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* ⭐⭐ 3. RESET & BASE ⭐⭐ */
+
+/* Reset universel : supprime marges/paddings natifs des navigateurs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none; /* Remplacé par le curseur personnalisé JS */
+  }
+}
+
+/* masque les éléments du curseur personnalisé (inutiles au toucher) */
+@media (hover: none) {
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  overflow-x: hidden; /* Empêche le scroll horizontal (débordements) */
+  line-height: 1.6;
+}
+
+body.home {
+  overflow: hidden;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ⭐⭐ 4. LOGO ⭐⭐ */
+.logo {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  grid-column: 1;
+  justify-self: start;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  /* filter: brightness(0) invert(1);  Enlever le filtre sur logo afin d'éviter de rendre l'image entièrement blanche */
+  transition: opacity 0.3s;
+  display: block;
+}
+
+/* Hover sur l'image logo */
+.logo img:hover {
+  opacity: 0.7;
+}
+
+/* Hover sur le lien texte "Retour" */
+.logo a:hover {
+  opacity: 0.7;
+}
+
+/* ⭐⭐ 5. CURSEUR PERSONNALISÉ ⭐⭐ */
+.cursor,
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%; /* forme circulaire */
+  pointer-events: none;
+  z-index: 9999; /* toujours au premier plan */
+  transform: translate(-50%, -50%);
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.15s ease-out; /* Transition du scale uniquement */
+}
+
+/* État actif : le follower s'agrandit quand la souris survole un élément interactif */
+.cursor-active .cursor-follower {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+}
+
+/* ⭐⭐ 6. NAVIGATION ⭐⭐ */
+nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* 3 zones : gauche, centre, droite */
+  align-items: center;
+  padding: 2rem 4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+
+/* Liens de navigation : centrés dans la colonne 2 */
+.nav-links {
+  display: flex;
+  list-style: none;
+  grid-column: 2;
+  justify-self: center;
+  gap: 2rem;
+}
+
+.nav-links li {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  transition: opacity 0.3s;
+  opacity: 0.6;
+}
+
+/* Lien actif ou au survol */
+.nav-links a:hover,
+.nav-links a.active {
+  opacity: 1;
+}
+
+/* ⭐⭐ 7. SÉLECTEUR DE LANGUE ⭐⭐ */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  grid-column: 3; /* Colonne droite */
+  justify-self: end;
+  gap: 6px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 1px;
+  opacity: 0.25;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+/* Taille des drapeaux SVG */
+.lang-btn svg {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Drapeau de la langue active */
+.lang-btn.active {
+  opacity: 0.7;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Survol */
+.lang-btn:hover {
+  opacity: 0.85;
+}
+
+/* ⭐⭐ 8. SECTION HERO (page d'accueil) ⭐⭐ */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #020111, #000);
+}
+
+/* Le starfield occupe tout le hero en arrière-plan */
+#space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Derrière le texte */
+}
+
+/* Titre principal du hero : animation au chargement */
+.hero-text {
+  font-family: var(--font-title);
+  position: relative;
+  z-index: 2; /* Par-dessus le starfield */
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 1;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards 0.5s;
+  pointer-events: none;
+}
+
+/* ⭐⭐ 9. PAGES SECONDAIRES - structure générale ⭐⭐ */
+
+/* Pages secondaires: Projets, Contact) */
+.page-title {
+  font-family: var(--font-title);
+  font-size: clamp(3rem, 10vw, 6rem); /* Responsive */
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+main {
+  padding: 150px 4rem 100px;
+  min-height: 100vh;
+}
+
+/* Page À Propos */
+.about-section {
+  padding: 150px 10%;
+  max-width: 1000px;
+}
+
+.about-title {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+/* Paragraphe de présentation */
+.about-content {
+  max-width: 900px;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+/* Mots mis en valeur dans le texte 
+.about-content span {
+  color: #fff;
+}
+  */
+
+/* ⭐⭐ 10. GRILLE DE PROJETS ⭐⭐ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Au moins 400px par colonne */
+  gap: 4rem;
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+/* Classe ajoutée par JS (IntersectionObserver) = déclenche l'animation d'apparition */
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #111;
+  position: relative;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Zoom fluide */
+}
+
+.project-card:hover .placeholder-img {
+  transform: scale(1.03);
+  background-color: #222;
+}
+
+/* Titre du projet */
+.project-info h2 {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Description / catégorie du projet */
+.project-info p {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+/* ⭐⭐ 11. OVERLAY PROJETS ⭐⭐ */
+.project-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba( 0, 0, 0, 0.97);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Classe ajoutée par JS pour afficher et activer l'overlay */
+.project-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Conteneur de l'image dans l'overlay */
+.overlay-content {
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image de projet affichée dans l'overlay */
+.overlay-content img {
+  width: 100%;
+  max-height: 80vh; 
+  object-fit: contain;
+  background-color: #000;
+}
+
+/* Informations textuelles sous l'image */
+.overlay-details {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.overlay-details h2 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-details p {
+  opacity: 0.6;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bouton de fermeture [×] positionné en haut à droite de l'overlay */
+.close-overlay {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.close-overlay:hover {
+  opacity: 1;
+}
+
+/* ⭐⭐ 12. FORMULAIRE DE CONTACT ⭐⭐ */
+
+/* Section contact */
+.contact-title {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  margin-bottom: 40px;
+  opacity: 1;
+  transform: none;
+}
+
+.contact-container {
+  max-width: 700px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.form-group {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.4s;
+}
+
+/* La ligne de séparation devient blanche quand le champ est actif */
+.form-group:focus-within {
+  border-color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none; 
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+}
+
+/* Textarea plus grande et non redimensionnable */
+textarea {
+  height: 200px;
+  resize: none;
+}
+
+/* Bouton d'envoi */
+.submit-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  transition: 0.4s;
+}
+
+/* Survol : fond blanc, texte noir */
+.submit-btn:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Boutons CV (page À Propos) */
+.cv-buttons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cv-buttons .submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+/* Lien email dans le footer */
+.email-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  margin-bottom: 1rem;
+}
+
+.email-link:hover {
+  opacity: 1;
+}
+
+/* ⭐⭐ 13. FOOTER & RÉSEAUX SOCIAUX ⭐⭐ */
+footer {
+  padding: 4rem;
+  text-align: center;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding-bottom: 70px;
+}
+
+/* Icône sociale : cercle coloré avec la couleur de la variable --color */
+.social-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: var(--transition-smooth);
+  color: var(--color); 
+  border: 1px solid var(--color);
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.3));
+}
+
+/* Attribution de la variable --color par réseau social */
+.social-instagram {
+  --color: var(--color-instagram);
+}
+.social-youtube {
+  --color: var(--color-youtube);
+}
+.social-tiktok {
+  --color: var(--color-tiktok);
+}
+.social-linkedin {
+  --color: var(--color-linkedin);
+}
+
+/* Survol : fond coloré, icône blanche, halo lumineux */
+.social-icon:hover {
+  background-color: var(--color);
+  color: white;
+  box-shadow: 0 0 20px var(--color);
+  transform: translateY(-5px);
+}
+
+/* ⭐⭐ 14. ANIMATIONS CSS ⭐⭐ */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ⭐⭐ 15. RTL — Arabe ⭐⭐ */
+
+/* Inverse les positions des colonnes dans la grille nav */
+[dir="rtl"] nav {
+  direction: rtl;
+}
+
+/* Logo passe à droite en RTL ( à corriger)
+[dir="rtl"] .logo {
+  grid-column: 3;
+  justify-self: end;
+}
+*/
+
+/* Nav-links reste au centre */
+[dir="rtl"] .nav-links {
+  grid-column: 2;
+}
+
+[dir="rtl"] .lang-switcher {
+  grid-column: 1;
+  justify-self: start;
+  flex-direction: row-reverse; 
+}
+
+[dir="rtl"] .contact-container,
+[dir="rtl"] .about-section,
+[dir="rtl"] .projects-section {
+  text-align: right;
+}
+
+[dir="rtl"] .submit-btn {
+  align-self: flex-end;
+}
+
+[dir="rtl"] .cv-buttons {
+  flex-direction: row-reverse;
+}
+
+/* ⭐⭐ 16. BURGER MENU ⭐⭐ */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 101;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+/* ⭐⭐ 17. RESPONSIVE MOBILE (max-width: 768px) ⭐⭐ */
+@media (max-width: 768px) {
+
+  /* Navigation : 3 colonnes sans colonne centrale */
+  nav {
+    grid-template-columns: 1fr auto auto;
+    padding: 1.5rem 2rem;
+  }
+
+  .logo {
+    grid-column: 1;
+  }
+
+  .burger-menu {
+    display: flex;
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .lang-switcher {
+    grid-column: 3;
+    justify-self: end;
+    gap: 5px;
+  }
+
+  .lang-btn svg {
+    width: 18px;
+    height: 12px;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%; 
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    backdrop-filter: blur(10px); /* Chrome, Firefox */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    z-index: 100;
+    gap: 0;
+  }
+
+  /* Menu ouvert : glisse dans l'écran */
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+
+  .burger-menu.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg); /* Barre du haut = diagonale / */
+  }
+  .burger-menu.active .bar:nth-child(2) {
+    opacity: 0; /* Barre centrale disparaît */
+  }
+  .burger-menu.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image-wrapper {
+    height: 280px;
+  }
+
+  .cv-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* ⭐⭐ 18. GALERIE ARTISTIQUE — Projet 4 ⭐⭐ */
+
+/* La carte artistique occupe toute la largeur de la grille */
+.project-card--artistic {
+  grid-column: 1 / -1;
+}
+
+.artistic-wrapper {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Gradient coloré en overlay — suit la souris, visible au survol */
+.artistic-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0; 
+  transition: opacity 0.6s ease;
+
+  /* Dégradé conique multicolore */
+  background: conic-gradient(
+    from 0turn,
+    rgba(255, 175, 204, 0.9) 25%, /* Rose */
+    rgba(162, 210, 255, 0.9) 25%,
+    rgba(162, 210, 255, 0.9) 50%, /* Bleu clair */
+    rgba(255, 210, 80, 0.9) 50%, /* Jaune doré */
+    rgba(255, 210, 80, 0.9) 75%,
+    rgba(203, 212, 219, 0.9) 75% /* Gris bleuté */
+  );
+
+  /* La position du gradient est pilotée par les variables --x et --y (JS) */
+  --offset-x: calc(var(--x, 0) * 1px);
+  --offset-y: calc(var(--y, 0) * 1px);
+  background-position: calc(100% + var(--offset-x, -50%))
+    calc(100% + var(--offset-y, -50%));
+  background-size: 200% 200%;
+
+  mix-blend-mode: color; /* Se mélange aux couleurs de l'image */
+}
+
+/* Affiche le gradient au survol de la carte */
+.project-card--artistic:hover .artistic-gradient {
+  opacity: 1;
+}
+
+.artistic-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.artistic-slide {
+  position: absolute;
+  inset: 0;
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  opacity: 0; 
+  transition:
+    opacity 1s ease,
+    transform 1.2s ease;
+  transform: scale(1.05);
+}
+
+.artistic-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.artistic-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+/* Chaque point */
+.artistic-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+/* Point de la slide active */
+.artistic-dot.active {
+  background: #fff;
+  transform: scale(1.4); /* Légèrement agrandi pour indiquer la sélection */
+}
+
+/* Flèches de navigation (précédente / suivante) */
+.artistic-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    background 0.3s;
+  font-size: 0.8rem;
+}
+
+/* Flèche précédente : gauche */
+.artistic-arrow--prev {
+  left: 1.5rem;
+}
+/* Flèche suivante  : droite */
+.artistic-arrow--next {
+  right: 1.5rem;
+}
+
+/* Flèches visibles au survol du wrapper */
+.artistic-wrapper:hover .artistic-arrow {
+  opacity: 1;
+}
+
+.artistic-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Compteur de slides */
+.artistic-counter {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 3;
+}
+
+/* Sur Mobile */
+@media (max-width: 768px) {
+  .artistic-wrapper {
+    height: 380px;
+  }
+
+  .project-card--artistic {
+    grid-column: 1;
+  }
+}

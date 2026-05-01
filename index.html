@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Aymen</title>
+    <meta name="description" content="Portfolio d'Aymen CHAABANE, développeur & designer créatif.">
+    <link rel="icon" type="image/png" href="./public/favicon/favicon-transparent-noir.png" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body class="home">
+
+    <!-- Curseur personnalisé point blanc centré sur la souris + anneau plus grand avec un léger retard [effet "lag"] (desktop uniquement - masqué sur mobile par le CSS) -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <nav aria-label="Navigation principale">
+
+        <!-- Zone logo : lien de retour vers l'accueil -->
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./public/logo/aymen-transparent.png" alt="Logo Aymen" height="32">
+            </a>
+        </div>
+
+        <!-- Burger menu mobile -->
+        <div class="burger-menu" id="burger" role="button" tabindex="0" aria-label="Ouvrir le menu de navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Sélecteur de langue -->
+        <div class="lang-switcher">
+
+            <!-- Français -->
+            <button class="lang-btn active" data-lang="fr" title="Français">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+                    <rect width="1" height="2" fill="#002395"/>
+                    <rect x="1" width="1" height="2" fill="#fff"/>
+                    <rect x="2" width="1" height="2" fill="#ED2939"/>
+                </svg>
+            </button>
+
+            <!-- Anglais -->
+            <button class="lang-btn" data-lang="en" title="English">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+                    <rect width="60" height="30" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
+                    <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
+                    <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
+                </svg>
+            </button>
+
+            <!-- Arabe (droite vers gauche) -->
+            <button class="lang-btn" data-lang="ar" title="العربية">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+                    <rect width="3" height="2" fill="#E70013"/>
+                    <circle cx="1.3" cy="1" r="0.45" fill="none" stroke="#fff" stroke-width="0.12"/>
+                    <polygon points="1.6,1 1.75,0.6 1.9,1 1.5,0.75 1.95,0.75" fill="#fff"/>
+                </svg>
+            </button>
+
+            <!-- Japonais -->
+            <button class="lang-btn" data-lang="ja" title="日本語">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+                    <rect width="3" height="2" fill="#fff"/>
+                    <circle cx="1.5" cy="1" r="0.6" fill="#BC002D"/>
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- liens de navigation principaux -->
+        <ul class="nav-links" id="nav-list">
+            <li><a href="./projets.html"  data-i18n="nav_projects">Projets</a></li>
+            <li><a href="./a-propos.html" data-i18n="nav_about">À propos</a></li>
+            <li><a href="./contact.html"  data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Section Hero : plein écran (100vh), fond étoilé animé -->
+    <header class="hero">
+
+        <!-- Canvas 2D : contient l'animation du champ d'étoiles (starfield) gérée par script.js -->
+        <canvas id="space" aria-hidden="true"></canvas>
+
+        <h1 class="hero-text">
+            <span data-i18n="hero_line1">Créatif</span><br>
+            <span data-i18n="hero_line2">Développeur</span><br>
+            <span data-i18n="hero_line3">Designer</span>
+        </h1>
+
+    </header>
+
+    <!-- Scripts : ordre obligatoire (translations -> lang -> script) -->
+    <script src="./public/js/translations.js"></script>
+    <script src="./public/js/lang.js"></script>         
+    <script src="./public/js/script.js"></script>       <!-- Animations et interactions -->
+
+</body>
+</html>

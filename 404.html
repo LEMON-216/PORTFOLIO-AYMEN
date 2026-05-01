@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page introuvable | Portfolio Aymen</title>
+    <link rel="icon" type="image/png" href="./public/favicon/favicon-transparent-noir.png" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <!-- ⭐⭐ Styles spécifiques à la page 404 ⭐⭐ -->
+    <style>
+        body {
+            background: radial-gradient(circle at center, #020111, #000);
+            min-height: 100vh;
+        }
+
+        #space-404 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .error-section {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* "404" en très grand, semi-transparent */
+        .error-code {
+            font-family: var(--font-title);
+            font-size: clamp(8rem, 25vw, 16rem);
+            font-weight: 800;
+            opacity: 0.15;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        /* Message principal */
+        .error-message {
+            font-family: var(--font-title);
+            font-size: clamp(1.5rem, 4vw, 2.8rem);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        /* Sous-titre */
+        .error-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 3rem;
+            max-width: 500px;
+            letter-spacing: 1px;
+        }
+
+        /* Bouton de retour à l'accueil */
+        .error-link {
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 1rem 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            transition: 0.4s;
+            cursor: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .error-link:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Mobile : ajustements */
+        @media (max-width: 768px) {
+            .error-subtitle {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+
+            .error-link {
+                padding: 0.9rem 2rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <canvas id="space-404" aria-hidden="true"></canvas>
+
+    <!-- Contenu principal de la page d'erreur -->
+    <main class="error-section">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Vous vous êtes égaré dans l'espace</h1>
+        <p class="error-subtitle">
+            Cette page n'existe pas, ou plus.<br>
+            Mais le chemin du retour est là, juste en dessous.
+        </p>
+        <a href="./index.html" class="error-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour à l'accueil
+        </a>
+    </main>
+
+    <!-- ⭐⭐ Script du starfield discret (autonome, ne dépend pas de script.js) ⭐⭐ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* ⭐⭐ STARFIELD DISCRET POUR LA 404 ⭐⭐ */
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+
+            let mouseX = 0, mouseY = 0;
+            let posX = 0, posY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                if (cursor) {
+                    cursor.style.left = `${mouseX}px`;
+                    cursor.style.top = `${mouseY}px`;
+                }
+            });
+
+            function animateCursor() {
+                const ease = 0.15;
+                posX += (mouseX - posX) * ease;
+                posY += (mouseY - posY) * ease;
+                if (follower) {
+                    follower.style.left = `${posX}px`;
+                    follower.style.top = `${posY}px`;
+                }
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Effet curseur agrandi sur le bouton //
+            document.querySelectorAll('a, .error-link').forEach(el => {
+                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-active'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-active'));
+            });
+
+            /* ⭐⭐ STARFIELD ⭐⭐ */
+            const canvas = document.getElementById('space-404');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const stars = [];
+            const starsCount = 300;  // Moins d'étoiles que l'accueil (800)
+            const speed = 0.25; // Vitesse plus lente pour un effet contemplatif
+            let w, h;
+
+            const resize = () => {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            };
+            window.addEventListener('resize', resize);
+            resize();
+
+            for (let i = 0; i < starsCount; i++) {
+                stars.push({
+                    x: Math.random() * w - w / 2,
+                    y: Math.random() * h - h / 2,
+                    z: Math.random() * w
+                });
+            }
+
+            function animateStars() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+                ctx.fillRect(0, 0, w, h);
+                ctx.fillStyle = '#ffffff';
+
+                stars.forEach(star => {
+                    star.z -= speed;
+
+                    if (star.z <= 0) {
+                        star.z = w;
+                        star.x = Math.random() * w - w / 2;
+                        star.y = Math.random() * h - h / 2;
+                    }
+
+                    const sx = (star.x / star.z) * w + w / 2;
+                    const sy = (star.y / star.z) * h + h / 2;
+                    const size = Math.max(0, (1 - star.z / w) * 2);
+
+                    if (sx > 0 && sx < w && sy > 0 && sy < h) {
+                        ctx.beginPath();
+                        ctx.arc(sx, sy, size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+
+                requestAnimationFrame(animateStars);
+            }
+
+            animateStars();
+        });
+    </script>
+
+    <!-- Scripts : ordre obligatoire (translations -> lang -> script) -->
+    <script src="./public/js/translations.js"></script>
+    <script src="./public/js/lang.js"></script>
+    <script src="./public/js/script.js"></script>
+
+</body>
+
+</html>

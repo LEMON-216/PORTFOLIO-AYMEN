@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Portfolio Aymen</title>
+    <link rel="icon" type="image/png" href="./public/favicon/favicon-transparent-noir.png" sizes="32x32">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Curseur personnalisé point blanc centré sur la souris + anneau plus grand avec un léger retard [effet "lag"] (desktop uniquement - masqué sur mobile par le CSS) -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- DOM harmonisé avec index.html = logo + burger + langue + liens -->
+    <nav aria-label="Navigation principale">
+
+        <!-- Zone logo : lien de retour vers l'accueil -->
+        <div class="logo">
+            <a href="./index.html" data-i18n="nav_back">Retour</a>
+        </div>
+
+        <!-- Burger menu mobile -->
+        <div class="burger-menu" id="burger" role="button" tabindex="0" aria-label="Ouvrir le menu de navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Sélecteur de langue -->
+        <div class="lang-switcher">
+
+            <button class="lang-btn" data-lang="fr" title="Français">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+                    <rect width="1" height="2" fill="#002395" />
+                    <rect x="1" width="1" height="2" fill="#fff" />
+                    <rect x="2" width="1" height="2" fill="#ED2939" />
+                </svg>
+            </button>
+
+            <button class="lang-btn" data-lang="en" title="English">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+                    <rect width="60" height="30" fill="#012169" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" />
+                    <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10" />
+                    <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6" />
+                </svg>
+            </button>
+
+            <button class="lang-btn" data-lang="ar" title="العربية">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+                    <rect width="3" height="2" fill="#E70013" />
+                    <circle cx="1.3" cy="1" r="0.45" fill="none" stroke="#fff" stroke-width="0.12" />
+                    <polygon points="1.6,1 1.75,0.6 1.9,1 1.5,0.75 1.95,0.75" fill="#fff" />
+                </svg>
+            </button>
+
+            <button class="lang-btn" data-lang="ja" title="日本語">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+                    <rect width="3" height="2" fill="#fff" />
+                    <circle cx="1.5" cy="1" r="0.6" fill="#BC002D" />
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- Liens principaux -->
+        <ul class="nav-links" id="nav-list">
+            <li><a href="./projets.html" data-i18n="nav_projects">Projets</a></li>
+
+            <!-- Classe "active" sur le lien de la page courante -->
+            <li><a href="./a-propos.html" class="active" data-i18n="nav_about">À propos</a></li>
+            <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Section À Propos -->
+    <main class="about-section">
+        <h1 class="about-title">
+            <span data-i18n="about_title1">Passionné par le</span><br>
+            <span data-i18n="about_title2">Minimalisme</span>
+        </h1>
+
+        <!-- Texte de présentation -->
+        <p class="about-content" data-i18n="about_text">
+            Chercheur postdoctoral devenu chef de projet digital et développeur web, je mets au service du numérique un regard analytique forgé par des années de recherche en sciences humaines. Anthropologue de formation, développeur web par passion, je transpose dans le digital une décennie d'étude des pratiques culturelles. Mon approche associe rigueur méthodologique, sensibilité culturelle et maîtrise technique pour concevoir des expériences numériques pensées pour l'utilisateur.
+        </p>
+
+        <!-- Boutons de téléchargement des CV -->
+        <div class="cv-buttons">
+
+            <!-- CV Artistique (fichier PDF disponible dans public/docs/) -->
+            <a href="./public/docs/3-%20FR_CV%20CHAABANE%20Aymen%20%2B%20REALISATIONS.pdf"
+                download="CV_Aymen_Chaabane_Artistique.pdf" class="submit-btn">
+                <i class="fas fa-download"></i>
+                <span data-i18n="about_cv_artistic">CV Artistique</span>
+            </a>
+
+            <!-- CV_CHAABANE_Aymen_Digital.pdf dans public/docs/ -->
+            <a href="./public/docs/CV_CHAABANE_Aymen.pdf" download="CV_Aymen_Chaabane_Digital.pdf" class="submit-btn">
+                <i class="fas fa-download"></i>
+                <span data-i18n="about_cv_digital">CV Digital</span>
+            </a>
+
+            <!-- CV_Graphique.png dans public/docs/ -->
+            <a href="./public/docs/CV GRAPHIQUE.png" download="CV_Aymen_Chaabane_Graphique.png" class="submit-btn">
+                <i class="fas fa-download"></i>
+                <span data-i18n="about_cv_graphic">CV Graphique</span>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Scripts : ordre obligatoire (translations -> lang -> script) -->
+    <script src="./public/js/translations.js"></script>
+    <script src="./public/js/lang.js"></script>
+    <script src="./public/js/script.js"></script>
+
+</body>
+
+</html>
