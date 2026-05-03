@@ -179,7 +179,7 @@ h2.section::after {
   line-height: 1.4;
   letter-spacing: .3px;
 }
-.entry-body { }
+.entry-body { min-width: 0; }
 .entry-title {
   font-size: 11px;
   font-weight: 700;
@@ -199,6 +199,9 @@ h2.section::after {
   margin-top: 4px;
   line-height: 1.55;
   text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* ── PUBLICATIONS ───────────────────────────────────── */
@@ -240,39 +243,54 @@ h2.section::after {
 .ref-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 18px;
+  gap: 14px;
   margin-top: 12px;
 }
 .ref-card {
   font-size: 10px;
   color: var(--mid);
   line-height: 1.5;
-  padding: 12px;
+  padding: 11px 10px;
   background: var(--cream-d);
   border-radius: 4px;
   border-left: 3px solid var(--terra);
+  min-width: 0;            /* allows the card to shrink inside its grid cell */
+  overflow: hidden;        /* clips any rare overflow */
 }
 .ref-name {
   font-family:'Playfair Display', serif;
   font-weight: 700;
   color: var(--dark);
-  font-size: 11px;
+  font-size: 10.5px;
   margin-bottom: 3px;
-  letter-spacing: .5px;
+  letter-spacing: .3px;
 }
 .ref-org {
   font-style: italic;
   color: var(--rust);
   margin-bottom: 6px;
-  font-size: 10px;
+  font-size: 9.5px;
+  overflow-wrap: break-word;
 }
 .ref-line {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 4px;
-  font-size: 9.5px;
+  display: block;          /* stacked: label sur 1 ligne, valeur en dessous */
+  font-size: 9px;
+  margin-bottom: 3px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;   /* allows email/phone to wrap if needed */
 }
-.ref-line span:first-child { color: var(--dark); font-weight: 600; }
+.ref-line span:first-child {
+  color: var(--dark);
+  font-weight: 600;
+  display: block;          /* label sur sa propre ligne */
+}
+.ref-line span:last-child {
+  color: var(--mid);
+  font-style: italic;
+  display: block;
+  padding-left: 4px;
+}
 
 /* ── FOOTER RINGS ───────────────────────────────────── */
 .footer-rings {
@@ -592,7 +610,7 @@ h2.section::after {
       </div>
     </div>
 
-    <!-- Decorative footer rings -->
+    <!-- Decorative footer cercles -->
     <div class="footer-rings">
       <svg width="80" height="55" viewBox="0 0 88 62" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="31" r="22" fill="none" stroke="#8B3A2A" stroke-width="4.5"/>

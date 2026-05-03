@@ -184,6 +184,9 @@ body {
 <!-- ══ CONTACT BAR ══════════════════════════════════════ -->
 <div class="contact-bar">
   <div class="ci">
+    <div class="ci-icon">&#128205;</div>
+    <span>1 impasse Guy de Maupassant, 50500 CARENTAN</span>
+  </div>
   <div class="ci">
     <div class="ci-icon">&#128222;</div>
     <span>+33 6 52 88 17 26</span>
@@ -272,12 +275,12 @@ body {
     <!-- ════════════════════════════════════════════════ -->
 
     <!-- · · · · 2025 – TOP (θ=-90°): (370, 132) · · · · -->
-    <line x1="370" y1="120" x2="370" y2="60" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <line x1="370" y1="120" x2="370" y2="44" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
     <circle cx="370" cy="132" r="14" fill="#C4903A"/>
     <text x="370" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">2025</text>
-    <!-- year label above -->
-    <text x="370" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Formation en cours</text>
-    <text x="370" y="64" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">FIM CCI · Saint-Lô</text>
+    <!-- year label above (remontés pour éviter le contact avec l'anneau vert) -->
+    <text x="370" y="22" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Formation en cours</text>
+    <text x="370" y="34" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">FIM CCI · Saint-Lô</text>
 
     <!-- · · · · 2022 – TOP-RIGHT (θ=-50°): cos=-50°=0.643, sin=-50°=-0.766 → (504,181) · · · -->
     <!-- x=370+208×0.643=504  y=340+208×(-0.766)=181 -->
@@ -500,29 +503,32 @@ body {
 
 </div>
 
-<!-- ══ LANGUAGES ═════════════════════════════════════════ -->
-<div class="lang-row">
+<!-- ══ FOOTER STACK (3 lignes empilées) ═══════════════════════ -->
+
+<!-- 1 · LANGUES -->
+<div class="lang-row" style="padding:18px 40px 14px;">
   <span class="lang-lbl">Langues —</span>
   <div class="li"><span class="li-name">Français</span><span class="li-lv c2">C2</span></div>
   <div class="li"><span class="li-name">Anglais</span><span class="li-lv c2">C2</span></div>
   <div class="li"><span class="li-name">Arabe</span><span class="li-lv c2">C2</span></div>
   <div class="li"><span class="li-name">Italien</span><span class="li-lv b1">B1</span></div>
   <div class="li"><span class="li-name">Japonais</span><span class="li-lv a1">A1</span></div>
-</div> <br>
+</div>
 
-<!-- ══ FOOTER ════════════════════════════════════════════ -->
- <br>
-<div style="display:flex;justify-content:center;padding:12px 0 6px;">
+<!-- 2 · COORDONNÉES -->
+<div style="text-align:center;padding:14px 0 8px;font-size:11px;color:var(--mid);letter-spacing:1.5px;border-top:1px solid rgba(196,144,58,.3);">
+  chaabane_aymen@outlook.fr &nbsp;·&nbsp; +33 6 52 88 17 26
+</div>
+
+<!-- 3 · CERCLES DÉCORATIFS -->
+<div style="display:flex;justify-content:center;padding:8px 0 22px;">
   <svg width="88" height="62" viewBox="0 0 88 62" xmlns="http://www.w3.org/2000/svg">
     <circle cx="24" cy="31" r="22" fill="none" stroke="#8B3A2A" stroke-width="4.5"/>
     <circle cx="44" cy="31" r="22" fill="none" stroke="#C4903A" stroke-width="4.5"/>
     <circle cx="64" cy="31" r="22" fill="none" stroke="#A84D2F" stroke-width="4.5"/>
-  </svg> <br>
+  </svg>
 </div>
-<br>
-<div class="footer">
-  chaabane_aymen@outlook.fr &nbsp;·&nbsp; +33 6 52 88 17 26
-</div>
+
 
 </div><!-- /page -->
 
