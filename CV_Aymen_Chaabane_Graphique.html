@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CV Aymen Chaabane</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --cream:  #F2EDE4;
+  --terra:  #8B3A2A;
+  --rust:   #A84D2F;
+  --gold:   #C4903A;
+  --gold2:  #D4A84B;
+  --sage:   #7A9E7E;
+  --dark:   #2C1F14;
+  --mid:    #6B4E38;
+}
+
+@media print {
+  @page { size: A3 landscape; margin: 6mm; }
+  .no-print { display:none !important; }
+  body { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+}
+
+body {
+  background: var(--cream);
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+}
+
+.page {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 28px 0 20px;
+}
+
+/* ── HEADER ────────────────────────────────────────── */
+.header { text-align:center; margin-bottom:14px; }
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px; letter-spacing: 12px;
+  text-transform: uppercase; color: var(--dark);
+}
+.header .sub  { font-size:14px; letter-spacing:3px; color:var(--mid); margin-top:5px; }
+.header .tag  { font-size:11px; letter-spacing:1.5px; color:var(--rust); font-style:italic; margin-top:3px; }
+
+/* ── CONTACT BAR ────────────────────────────────────── */
+.contact-bar {
+  display:flex; justify-content:center; align-items:center;
+  gap:36px; padding:11px 40px;
+  background:rgba(196,144,58,.11);
+  border-top:1.5px solid var(--gold2);
+  border-bottom:1.5px solid var(--gold2);
+  flex-wrap:wrap; margin-bottom:0;
+}
+.ci { display:flex; align-items:center; gap:7px; font-size:11px; color:var(--mid); }
+.ci-icon {
+  width:24px; height:24px; border-radius:50%;
+  background:var(--gold); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:700; flex-shrink:0;
+}
+
+/* ── 3-COLUMN MAIN ──────────────────────────────────── */
+.main {
+  display:grid;
+  grid-template-columns: 230px 1fr 230px;
+  gap:0;
+  align-items:start;
+}
+
+/* ── SIDE COLUMNS ───────────────────────────────────── */
+.side { padding:22px 18px; display:flex; flex-direction:column; gap:22px; }
+.s-title {
+  font-family:'Playfair Display',serif;
+  font-size:10.5px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--rust); border-bottom:1px solid var(--gold2);
+  padding-bottom:4px; margin-bottom:10px;
+}
+.tl { margin-bottom:13px; }
+.tl-year { font-size:10px; font-weight:600; color:var(--gold); letter-spacing:.5px; }
+.tl-title { font-size:11.5px; font-weight:600; color:var(--dark); line-height:1.35; }
+.tl-sub { font-size:10px; color:var(--mid); line-height:1.5; margin-top:2px; }
+
+.project-line { font-size:10.5px; color:var(--mid); line-height:1.8; }
+.project-line strong { color:var(--dark); font-weight:600; }
+
+/* ── SVG CIRCLE AREA ────────────────────────────────── */
+.circle-area { display:flex; justify-content:center; align-items:center; padding:10px 0; }
+
+/* ── SKILLS STRIP ───────────────────────────────────── */
+.skills-strip {
+  padding:18px 50px 14px;
+  border-top:1px solid rgba(196,144,58,.3);
+}
+.strip-title {
+  font-family:'Playfair Display',serif;
+  font-size:11px; letter-spacing:3.5px; text-transform:uppercase;
+  color:var(--rust); text-align:center; margin-bottom:14px;
+}
+.badges {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:14px 18px;
+}
+.badge-wrap { display:flex; flex-direction:column; align-items:center; gap:5px; }
+.badge-circle {
+  width:62px; height:62px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:34px;
+  background:#fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  border: 2px solid rgba(196,144,58,.2);
+}
+.badge-circle i { line-height:1; }
+.badge-circle img, .badge-circle svg { width:36px; height:36px; }
+.badge-name { font-size:9.5px; color:var(--mid); letter-spacing:.4px; text-align:center; font-weight:500; }
+
+/* ── BOTTOM 3-COL ───────────────────────────────────── */
+.bottom-row {
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  gap:28px; padding:14px 50px;
+  border-top:1px solid rgba(196,144,58,.3);
+}
+.b-title {
+  font-family:'Playfair Display',serif;
+  font-size:10.5px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--rust); border-bottom:1px solid var(--gold2);
+  padding-bottom:4px; margin-bottom:10px;
+}
+.chips { display:flex; flex-wrap:wrap; gap:5px 6px; }
+.chip {
+  font-size:9.5px; padding:3px 9px; border-radius:10px;
+  border:1px solid; font-weight:400;
+}
+.cr { border-color:var(--terra); color:var(--terra); background:rgba(139,58,42,.07); }
+.cg { border-color:var(--sage);  color:#3a6b3e;      background:rgba(122,158,126,.1); }
+
+/* ── LANGUAGES ──────────────────────────────────────── */
+.lang-row {
+  display:flex; justify-content:center; align-items:center;
+  gap:30px; padding:13px 40px;
+  border-top:1px solid rgba(196,144,58,.3);
+  flex-wrap:wrap;
+}
+.lang-lbl { font-family:'Playfair Display',serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--rust); }
+.li { text-align:center; }
+.li-name { font-size:11.5px; font-weight:600; letter-spacing:.5px; display:block; }
+.li-lv { display:inline-block; margin-top:3px; font-size:9.5px; padding:1px 9px; border-radius:10px; color:#fff; }
+.c2 { background:var(--terra); }
+.b1 { background:var(--gold); }
+.a1 { background:var(--sage); }
+
+/* ── FOOTER ─────────────────────────────────────────── */
+.footer { text-align:center; padding:10px 0 26px; font-size:10px; color:var(--mid); letter-spacing:1.5px; }
+
+/* ── PRINT BUTTON ───────────────────────────────────── */
+.print-btn {
+  position:fixed; bottom:28px; right:28px;
+  background:var(--terra); color:#fff;
+  border:none; padding:12px 26px;
+  font-size:12.5px; font-weight:600; letter-spacing:.8px;
+  border-radius:30px; cursor:pointer;
+  box-shadow:0 4px 16px rgba(139,58,42,.4);
+  font-family:'Inter',sans-serif; z-index:1000;
+  transition: background .2s;
+}
+.print-btn:hover { background:var(--rust); }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- ══ HEADER ══════════════════════════════════════════ -->
+<div class="header">
+  <h1>Aymen Chaabane</h1>
+  <p class="sub">Chef de Projet Digital &nbsp;·&nbsp; Développeur Web</p>
+  <p class="tag">Doctorat · Ethno-Scénologie · En reconversion vers le Digital</p>
+</div>
+
+<!-- ══ CONTACT BAR ══════════════════════════════════════ -->
+<div class="contact-bar">
+  <div class="ci">
+  <div class="ci">
+    <div class="ci-icon">&#128222;</div>
+    <span>+33 6 52 88 17 26</span>
+  </div>
+  <div class="ci">
+    <div class="ci-icon">&#9993;</div>
+    <span>chaabane_aymen@outlook.fr</span>
+  </div>
+  <div class="ci">
+    <div class="ci-icon" style="background:var(--dark);font-family:'Playfair Display',serif;font-size:11px;">in</div>
+    <span>linkedin.com/in/aymen-chaabane-7a491533a</span>
+  </div>
+</div>
+
+<!-- ══ MAIN 3-COLUMN ════════════════════════════════════ -->
+<div class="main">
+
+  <!-- LEFT: Formations + Compétences -->
+  <div class="side">
+    <div>
+      <div class="s-title">Formations</div>
+      <div class="tl">
+        <div class="tl-year">Depuis 2025</div>
+        <div class="tl-title">Chef de Projet Digital</div>
+        <div class="tl-sub">FIM CCI Ouest Normandie, Saint-Lô</div>
+      </div>
+      <div class="tl">
+        <div class="tl-year">2020</div>
+        <div class="tl-title">Doctorat</div>
+        <div class="tl-sub">Ethno-Scénologie<br>Univ. Franche-Comté, Besançon</div>
+      </div>
+      <div class="tl">
+        <div class="tl-year">2015</div>
+        <div class="tl-title">Master</div>
+        <div class="tl-sub">Arts du Spectacle<br>Université Paris 8, Vincennes</div>
+      </div>
+      <div class="tl">
+        <div class="tl-year">2010</div>
+        <div class="tl-title">Maîtrise</div>
+        <div class="tl-sub">Mise en Scène &amp; Formation d'Acteur<br>ISAD, Tunisie</div>
+      </div>
+    </div>
+    <div>
+      <div class="s-title">Compétences</div>
+      <div class="tl-sub" style="line-height:1.8">
+        <span style="color:var(--dark);font-weight:600;font-size:10.5px;">Gestion de projet</span><br>
+        Rédaction · Analyse · Pédagogie<br>Organisation d'événements · Créativité<br><br>
+        <span style="color:var(--dark);font-weight:600;font-size:10.5px;">Techniques web</span><br>
+        HTML · CSS · JavaScript<br>Bootstrap · Tailwind · GitHub · Figma<br><br>
+        <span style="color:var(--dark);font-weight:600;font-size:10.5px;">CMS</span><br>
+        WordPress · Prestashop
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER: SVG CIRCLES ─────────────────────────────── -->
+  <!--
+    Viewport: 740 x 680
+    Center:   cx=370, cy=340
+    Discs:    r=48 (terra) / r=100 (rust) / r=155 (gold 50%)
+    Gold ring (FORMATIONS): r=208
+    Sage ring (EXPERIENCES): r=278
+  -->
+  <div class="circle-area">
+  <svg width="740" height="680" viewBox="0 0 740 680" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- ── FILLED DISCS ── -->
+    <circle cx="370" cy="340" r="48"  fill="#8B3A2A"/>
+    <circle cx="370" cy="340" r="100" fill="#A84D2F" opacity=".82"/>
+    <circle cx="370" cy="340" r="155" fill="#C4903A" opacity=".46"/>
+
+    <!-- ── STROKE RINGS ── -->
+    <circle cx="370" cy="340" r="208" fill="none" stroke="#C4903A"  stroke-width="2.2"/>
+    <circle cx="370" cy="340" r="278" fill="none" stroke="#7A9E7E"  stroke-width="2.5"/>
+
+    <!-- ── MONOGRAM ── -->
+    <text x="370" y="348" text-anchor="middle"
+          font-family="Playfair Display,serif" font-size="20" font-weight="700"
+          fill="white" letter-spacing="3">A·C</text>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!--   GOLD RING — TIMELINE FORMATIONS (r=208)       -->
+    <!--   Dots with year bubbles + short dashed lines   -->
+    <!--   All coords: x=370+208·cos(θ), y=340+208·sin(θ) -->
+    <!--   θ measured from East, CCW positive in SVG=CW  -->
+    <!-- ════════════════════════════════════════════════ -->
+
+    <!-- · · · · 2025 – TOP (θ=-90°): (370, 132) · · · · -->
+    <line x1="370" y1="120" x2="370" y2="60" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="370" cy="132" r="14" fill="#C4903A"/>
+    <text x="370" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">2025</text>
+    <!-- year label above -->
+    <text x="370" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Formation en cours</text>
+    <text x="370" y="64" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">FIM CCI · Saint-Lô</text>
+
+    <!-- · · · · 2022 – TOP-RIGHT (θ=-50°): cos=-50°=0.643, sin=-50°=-0.766 → (504,181) · · · -->
+    <!-- x=370+208×0.643=504  y=340+208×(-0.766)=181 -->
+    <line x1="514" y1="174" x2="568" y2="134" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="504" cy="181" r="14" fill="#C4903A"/>
+    <text x="504" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">2022</text>
+    <text x="576" y="128" text-anchor="start" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Postdoc Kyoto</text>
+    <text x="576" y="141" text-anchor="start" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">Japon · 2022–2024</text>
+
+    <!-- · · · · 2020 – RIGHT (θ=0°): (578, 340) · · · · -->
+    <line x1="592" y1="340" x2="650" y2="340" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="578" cy="340" r="14" fill="#C4903A"/>
+    <text x="578" y="345" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">2020</text>
+    <text x="657" y="336" text-anchor="start" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Doctorat</text>
+    <text x="657" y="349" text-anchor="start" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">Franche-Comté</text>
+
+    <!-- · · · · 2015 – BOTTOM (θ=90°): (370, 548) · · · · -->
+    <line x1="370" y1="562" x2="370" y2="620" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="370" cy="548" r="14" fill="#C4903A"/>
+    <text x="370" y="553" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">2015</text>
+    <text x="370" y="632" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Master Arts du Spectacle</text>
+    <text x="370" y="645" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">Université Paris 8</text>
+
+    <!-- · · · · 2010 – BOTTOM-LEFT (θ=130°): cos130°=-0.643, sin130°=0.766 → (236,499) · · -->
+    <line x1="226" y1="506" x2="172" y2="546" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="236" cy="499" r="14" fill="white" stroke="#C4903A" stroke-width="2.2"/>
+    <text x="236" y="504" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#C4903A">2010</text>
+    <text x="164" y="552" text-anchor="end" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Maîtrise ISAD</text>
+    <text x="164" y="565" text-anchor="end" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">Mise en Scène · Tunisie</text>
+
+    <!-- · · · · 2009 – LEFT (θ=180°): (162, 340) · · · · -->
+    <line x1="148" y1="340" x2="88" y2="340" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="162" cy="340" r="14" fill="#C4903A"/>
+    <text x="162" y="345" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">2009</text>
+    <text x="82" y="336" text-anchor="end" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Metteur en Scène</text>
+    <text x="82" y="349" text-anchor="end" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">Scène · Festivals Intl</text>
+
+    <!-- · · · · 2007 – TOP-LEFT (θ=-130°): cos=-130°=-0.643, sin=-130°=-0.766 → (236,181) -->
+    <line x1="226" y1="174" x2="172" y2="134" stroke="#C4903A" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <circle cx="236" cy="181" r="14" fill="white" stroke="#C4903A" stroke-width="2.2"/>
+    <text x="236" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#C4903A">2007</text>
+    <text x="164" y="128" text-anchor="end" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#2C1F14">Acteur</text>
+    <text x="164" y="141" text-anchor="end" font-family="Inter,sans-serif" font-size="9.5" fill="#6B4E38">Film "TRENTE"</text>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!--   SAGE RING — EXPÉRIENCES (r=278)               -->
+    <!--   Only 4 dots, well-spaced, no label collision  -->
+    <!-- ════════════════════════════════════════════════ -->
+
+    <!-- · Kyoto Postdoc · TOP-RIGHT (θ=-60°): cos=0.5, sin=-0.866 → (509,100) -->
+    <circle cx="509" cy="100" r="9" fill="#7A9E7E"/>
+
+    <!-- · Asst Éducation · RIGHT-LOW (θ=40°): cos=0.766, sin=0.643 → (583,519) -->
+    <!-- x=370+278×0.766=583, y=340+278×0.643=519 -->
+    <circle cx="583" cy="519" r="9" fill="#7A9E7E"/>
+
+    <!-- · FIM Chef Projet · LEFT-LOW (θ=140°): cos=-0.766, sin=0.643 → (157,519) -->
+    <circle cx="157" cy="519" r="9" fill="#7A9E7E"/>
+
+    <!-- · Metteur en Scène · TOP-LEFT (θ=-120°): cos=-0.5, sin=-0.866 → (231,100) -->
+    <circle cx="231" cy="100" r="9" fill="#7A9E7E"/>
+
+  </svg>
+  </div>
+
+  <!-- RIGHT: Expériences + Projets -->
+  <div class="side">
+    <div>
+      <div class="s-title">Expériences</div>
+      <div class="tl">
+        <div class="tl-year">2022 – 2024</div>
+        <div class="tl-title">Chercheur Postdoctoral</div>
+        <div class="tl-sub">Kyoto City University of Arts, Japon<br>Formes performatives (kagura), anthropologie, production académique</div>
+      </div>
+      <div class="tl">
+        <div class="tl-year">2013 – 2021</div>
+        <div class="tl-title">Assistant d'Éducation</div>
+        <div class="tl-sub">Lycée Thère, Saint-Lô &amp; Collège César Franck, Paris<br>Encadrement élèves, vidéos pédagogiques, inclusion handicap</div>
+      </div>
+      <div class="tl">
+        <div class="tl-year">2009 – 2014</div>
+        <div class="tl-title">Metteur en Scène · Comédien</div>
+        <div class="tl-sub">Festivals JTC, ISAD, Avignon (international)<br>Création et mise en scène de spectacles</div>
+      </div>
+      <div class="tl">
+        <div class="tl-year">2007 – 2008</div>
+        <div class="tl-title">Acteur</div>
+        <div class="tl-sub">Société "Nouveau Film"<br>Film historique "TRENTE"</div>
+      </div>
+    </div>
+    <div>
+      <div class="s-title">Projets Web</div>
+      <div class="project-line">
+        <strong>Portfolio personnel</strong> (HTML/CSS/JS)<br>
+        Galerie interactive JavaScript<br>
+        <strong>Refonte Hotot.fr</strong> <em style="color:var(--rust)">(en cours)</em><br>
+        <strong>secretdecoton.fr</strong> e-commerce <em style="color:var(--rust)">(en cours)</em>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- ══ SKILLS STRIP ══════════════════════════════════════ -->
+<div class="skills-strip">
+  <div class="strip-title">Langages &amp; Outils Digitaux</div>
+  <div class="badges">
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-html5-plain colored"></i></div>
+      <div class="badge-name">HTML5</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-css3-plain colored"></i></div>
+      <div class="badge-name">CSS3</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-javascript-plain colored"></i></div>
+      <div class="badge-name">JavaScript</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-bootstrap-plain colored"></i></div>
+      <div class="badge-name">Bootstrap</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-tailwindcss-plain colored"></i></div>
+      <div class="badge-name">Tailwind CSS</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-github-original"></i></div>
+      <div class="badge-name">GitHub</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-figma-plain colored"></i></div>
+      <div class="badge-name">Figma</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-wordpress-plain colored"></i></div>
+      <div class="badge-name">WordPress</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle">
+        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm-9 187l-49-30 13-22 31 19 53-49 17 18-65 64z" fill="#DF0067"/>
+        </svg>
+      </div>
+      <div class="badge-name">Prestashop</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-illustrator-plain colored"></i></div>
+      <div class="badge-name">Illustrator</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-photoshop-plain colored"></i></div>
+      <div class="badge-name">Photoshop</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-canva-original colored"></i></div>
+      <div class="badge-name">Canva</div>
+    </div>
+
+    <div class="badge-wrap">
+      <div class="badge-circle"><i class="devicon-vscode-plain colored"></i></div>
+      <div class="badge-name">VS Code</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ BOTTOM ROW ════════════════════════════════════════ -->
+<div class="bottom-row">
+
+  <div>
+    <div class="b-title">Centres d'intérêt</div>
+    <div class="chips">
+      <span class="chip cg">Anthropologie</span>
+      <span class="chip cg">Archéologie</span>
+      <span class="chip cg">Arts du spectacle</span>
+      <span class="chip cg">Ethnologie</span>
+      <span class="chip cg">Histoire</span>
+      <span class="chip cg">Scénologie</span>
+      <span class="chip cg">Développement web</span>
+      <span class="chip cg">Sports</span>
+      <span class="chip cg">Méditation</span>
+      <span class="chip cg">Tai-chi-chuan</span>
+      <span class="chip cg">Voyage</span>
+      <span class="chip cg">Cuisine</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="b-title">Profil</div>
+    <p style="font-size:10.5px;line-height:1.75;color:var(--mid)">
+      En reconversion professionnelle, je mets au service du digital un parcours solide en recherche-création et analyse des pratiques culturelles. Je combine compétences techniques du développement web, gestion de projet digital et vision artistique pour concevoir des expériences numériques centrées sur l'utilisateur.
+    </p>
+  </div>
+
+  <div>
+    <div class="b-title">Outils &amp; Créatif</div>
+    <div class="chips" style="margin-bottom:10px;">
+      <span class="chip cr">Suite Adobe</span>
+      <span class="chip cr">Création multimédia</span>
+      <span class="chip cr">Communication scientifique</span>
+      <span class="chip cr">Rédaction académique</span>
+      <span class="chip cr">Organisation d'événements</span>
+      <span class="chip cr">Production de contenus</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ LANGUAGES ═════════════════════════════════════════ -->
+<div class="lang-row">
+  <span class="lang-lbl">Langues —</span>
+  <div class="li"><span class="li-name">Français</span><span class="li-lv c2">C2</span></div>
+  <div class="li"><span class="li-name">Anglais</span><span class="li-lv c2">C2</span></div>
+  <div class="li"><span class="li-name">Arabe</span><span class="li-lv c2">C2</span></div>
+  <div class="li"><span class="li-name">Italien</span><span class="li-lv b1">B1</span></div>
+  <div class="li"><span class="li-name">Japonais</span><span class="li-lv a1">A1</span></div>
+</div> <br>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+ <br>
+<div style="display:flex;justify-content:center;padding:12px 0 6px;">
+  <svg width="88" height="62" viewBox="0 0 88 62" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="24" cy="31" r="22" fill="none" stroke="#8B3A2A" stroke-width="4.5"/>
+    <circle cx="44" cy="31" r="22" fill="none" stroke="#C4903A" stroke-width="4.5"/>
+    <circle cx="64" cy="31" r="22" fill="none" stroke="#A84D2F" stroke-width="4.5"/>
+  </svg> <br>
+</div>
+<br>
+<div class="footer">
+  chaabane_aymen@outlook.fr &nbsp;·&nbsp; +33 6 52 88 17 26
+</div>
+
+</div><!-- /page -->
+
+<!-- ══ BOUTON PDF ══ -->
+<button class="print-btn no-print" onclick="window.print()">&#11015; Télécharger en PDF</button>
+
+</body>
+</html>
