@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>CV Digital — Aymen Chaabane</title>
+<title>CV Digital - Aymen Chaabane</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
@@ -46,7 +46,7 @@ body {
   grid-template-rows: auto auto 1fr;
 }
 
-/* ── HEADER avec courbe ─────────────────────────────── */
+/* ⭐⭐ HEADER ⭐⭐ */
 .header {
   position: relative;
   background: var(--dark);
@@ -112,7 +112,7 @@ body {
   color: rgba(242,237,228,.92);
 }
 
-/* ── CONTACT BAR ─────────────────────────────────────── */
+/* ⭐⭐ CONTACT ⭐⭐ */
 .contact-bar {
   display:flex; gap:10px; padding: 16px 40px 14px;
   background: rgba(196,144,58,.13);
@@ -133,7 +133,7 @@ body {
   font-size:10px; flex-shrink:0;
 }
 
-/* ── BODY 2 columns ──────────────────────────────────── */
+/* ⭐⭐ BODY A 2 COLONNES ⭐⭐ */
 .body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -176,7 +176,7 @@ body {
   line-height: 1.45;
 }
 
-/* ── COMPÉTENCES ─────────────────────────────────────── */
+/* ⭐⭐ COMPÉTENCES ⭐⭐ */
 .skills-block { margin-bottom: 10px; }
 .skills-label {
   display:inline-flex; align-items:center; gap:6px;
@@ -191,7 +191,7 @@ body {
   padding-left: 14px;
 }
 
-/* ── LANGAGES & LOGOS ────────────────────────────────── */
+/* ⭐⭐ LANGAGES & LOGOS ⭐⭐ */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -217,7 +217,7 @@ body {
   letter-spacing: .3px;
 }
 
-/* ── PROJETS ─────────────────────────────────────────── */
+/* ⭐⭐ PROJETS ⭐⭐ */
 .proj-item {
   font-size: 10px;
   color: var(--mid);
@@ -233,7 +233,7 @@ body {
 }
 .proj-item strong { color: var(--dark); font-weight:600; }
 
-/* ── INTÉRÊTS chips ──────────────────────────────────── */
+/* ⭐⭐ CENTRE D'INTÉRÊTS ⭐⭐ */
 .chips { display:flex; flex-wrap:wrap; gap:4px 5px; }
 .chip {
   font-size:9.5px;
@@ -244,7 +244,7 @@ body {
   border-radius:10px;
 }
 
-/* ── LANGUES ─────────────────────────────────────────── */
+/* ⭐⭐ LANGUES ⭐⭐ */
 .lang-list { display:flex; flex-wrap:wrap; gap:6px; }
 .lang-pill {
   display:flex; align-items:center; gap:5px;
@@ -261,13 +261,13 @@ body {
 .lang-pill .lvl.b { background: var(--gold); }
 .lang-pill .lvl.a { background: var(--sage); }
 
-/* ── FOOTER RINGS ───────────────────────────────────── */
+/* ⭐⭐ FOOTER CERCLES ⭐⭐ */
 .footer-rings {
   display:flex; justify-content:center;
   padding: 4px 0 12px;
 }
 
-/* ── PRINT BUTTON ────────────────────────────────────── */
+/* ⭐⭐ BUTTON IMPRIMER ⭐⭐ */
 .print-btn {
   position: fixed; bottom: 28px; right: 28px;
   background: var(--terra); color: var(--cream);
@@ -283,16 +283,13 @@ body {
 </head>
 <body>
 
-<div class="page">
+<main class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <!-- Photo : place ton fichier dans ./public/photo/aymen.jpg
-         Si l'image n'existe pas, le texte "A·C" s'affiche en fallback. -->
-    <div class="photo">
-      <img src="./public/photo/aymen.jpg" alt="Aymen Chaabane"
-           onerror="this.style.display='none'; this.parentElement.innerHTML='A·C';">
-    </div>
+  <!-- ⭐⭐ HEADER ⭐⭐ -->
+  <header class="header">
+    <figure class="photo">
+      <img src="./public/photo/aymen.jpg" alt="Aymen Chaabane" onerror="this.style.display='none'; this.parentElement.innerHTML='A·C';">
+    </figure>
     <div class="head-text">
       <h1>Aymen Chaabane</h1>
       <p class="role">Chef de Projet Digital · Développeur Web</p>
@@ -300,43 +297,43 @@ body {
         En reconversion professionnelle, je mets aujourd'hui au service du digital un parcours solide en recherche-création et analyse des pratiques culturelles. Je combine compétences techniques du développement web, gestion de projet digital et vision artistique pour concevoir des expériences numériques centrées sur l'utilisateur.
       </p>
     </div>
-  </div>
+  </header>
 
-  <!-- CONTACT BAR -->
-  <div class="contact-bar">
+  <!-- ⭐⭐ CONTACT ⭐⭐ -->
+  <address class="contact-bar">
     <div class="ci-pill"><div class="ic">📍</div>1 impasse Guy de Maupassant, 50500 CARENTAN</div>
     <div class="ci-pill"><div class="ic">📱</div>+33 6 52 88 17 26</div>
     <div class="ci-pill"><div class="ic">✉</div>chaabane_aymen@outlook.fr</div>
     <div class="ci-pill"><div class="ic" style="background:var(--dark);font-family:'Playfair Display',serif;font-size:11px;">in</div>linkedin.com/in/aymen-chaabane-7a491533a</div>
-  </div>
+  </address>
 
-  <!-- BODY 2 COLUMNS -->
-  <div class="body">
+  <!-- ⭐⭐ BODY A 2 COLONNES ⭐⭐ -->
+  <section class="body">
 
-    <!-- LEFT COLUMN -->
-    <div class="col">
+    <!-- COLONNE GAUCHE -->
+    <section class="col" aria-labelledby="formations-title">
 
-      <h2>Formations</h2>
-      <div class="entry">
-        <div class="entry-title">BACHELOR — Chef de Projet Digital · Développeur Web</div>
-        <div class="entry-meta">Depuis 2025</div>
-        <div class="entry-place">FIM CCI Ouest Normandie, Saint-Lô</div>
-      </div>
-      <div class="entry">
-        <div class="entry-title">DOCTORAT — Ethno-Scénologie · Théâtre &amp; Arts de la Scène</div>
-        <div class="entry-meta">2020</div>
-        <div class="entry-place">Université de Franche-Comté, Besançon</div>
-      </div>
-      <div class="entry">
-        <div class="entry-title">MASTER — Arts du Spectacle, Études Théâtrales</div>
-        <div class="entry-meta">2015</div>
-        <div class="entry-place">Université Paris 8, Vincennes-Saint-Denis</div>
-      </div>
-      <div class="entry">
-        <div class="entry-title">MAÎTRISE — Mise en Scène &amp; Formation d'Acteur</div>
-        <div class="entry-meta">2010</div>
-        <div class="entry-place">Institut Supérieur d'Art Dramatique, Tunisie</div>
-      </div>
+      <h2 id="formations-title">Formations</h2>
+      <article class="entry">
+        <h3 class="entry-title">BACHELOR — Chef de Projet Digital · Développeur Web</h3>
+        <p class="entry-meta">Depuis 2025</p>
+        <p class="entry-place">FIM CCI Ouest Normandie, Saint-Lô</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">DOCTORAT — Ethno-Scénologie · Théâtre &amp; Arts de la Scène</h3>
+        <p class="entry-meta">2020</p>
+        <p class="entry-place">Université de Franche-Comté, Besançon</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">MASTER — Arts du Spectacle, Études Théâtrales</h3>
+        <p class="entry-meta">2015</p>
+        <p class="entry-place">Université Paris 8, Vincennes-Saint-Denis</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">MAÎTRISE — Mise en Scène &amp; Formation d'Acteur</h3>
+        <p class="entry-meta">2010</p>
+        <p class="entry-place">Institut Supérieur d'Art Dramatique, Tunisie</p>
+      </article>
 
       <h2 style="margin-top:14px">Compétences</h2>
       <div class="skills-block">
@@ -371,35 +368,35 @@ body {
         <span class="chip">Cuisine</span>
         <span class="chip">Tai-chi-chuan</span>
       </div>
-    </div>
+    </section>
 
-    <!-- RIGHT COLUMN -->
-    <div class="col">
+    <!-- COLONNE DROITE -->
+    <section class="col" aria-labelledby="experiences-title">
 
-      <h2>Expériences professionnelles</h2>
-      <div class="entry">
-        <div class="entry-title">CHERCHEUR POSTDOCTORAL</div>
-        <div class="entry-meta">2022 – 2024</div>
-        <div class="entry-place">Kyoto City University of Arts, Japon</div>
-        <div class="entry-desc">Étude des formes performatives anciennes (kagura), analyse anthropologique, organisation d'événements scientifiques, production de contenus académiques.</div>
-      </div>
-      <div class="entry">
-        <div class="entry-title">ASSISTANT D'ÉDUCATION</div>
-        <div class="entry-meta">2013 – 2021</div>
-        <div class="entry-place">Lycée de Thère, Saint-Lô · Collège César Franck, Paris</div>
-        <div class="entry-desc">Encadrement d'élèves, activités éducatives et socio-culturelles, réalisation de vidéos pédagogiques, inclusion handicap, diverses tâches administratives.</div>
-      </div>
-      <div class="entry">
-        <div class="entry-title">METTEUR EN SCÈNE · COMÉDIEN</div>
-        <div class="entry-meta">2009 – 2014</div>
-        <div class="entry-desc">Création et mise en scène de spectacles, participation à des festivals internationaux (JTC, ISAD, Avignon).</div>
-      </div>
-      <div class="entry">
-        <div class="entry-title">ACTEUR</div>
-        <div class="entry-meta">2007 – 2008</div>
-        <div class="entry-place">Société "Nouveau Film"</div>
-        <div class="entry-desc">Acteur dans le film historique "TRENTE".</div>
-      </div>
+      <h2 id="experiences-title">Expériences professionnelles</h2>
+      <article class="entry">
+        <h3 class="entry-title">CHERCHEUR POSTDOCTORAL</h3>
+        <p class="entry-meta">2022 – 2024</p>
+        <p class="entry-place">Kyoto City University of Arts, Japon</p>
+        <p class="entry-desc">Étude des formes performatives anciennes (kagura), analyse anthropologique, organisation d'événements scientifiques, production de contenus académiques.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">ASSISTANT D'ÉDUCATION</h3>
+        <p class="entry-meta">2013 – 2021</p>
+        <p class="entry-place">Lycée de Thère, Saint-Lô · Collège César Franck, Paris</p>
+        <p class="entry-desc">Encadrement d'élèves, activités éducatives et socio-culturelles, réalisation de vidéos pédagogiques, inclusion handicap, diverses tâches administratives.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">METTEUR EN SCÈNE · COMÉDIEN</h3>
+        <p class="entry-meta">2009 – 2014</p>
+        <p class="entry-desc">Création et mise en scène de spectacles, participation à des festivals internationaux (JTC, ISAD, Avignon).</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">ACTEUR</h3>
+        <p class="entry-meta">2007 – 2008</p>
+        <p class="entry-place">Société "Nouveau Film"</p>
+        <p class="entry-desc">Acteur dans le film historique "TRENTE".</p>
+      </article>
 
       <h2 style="margin-top:14px">Langages &amp; outils digitaux</h2>
       <div class="tech-grid">
@@ -430,27 +427,27 @@ body {
       <div class="proj-item"><strong>secretdecoton.fr</strong> e-commerce <em style="color:var(--terra)">(en cours)</em></div>
 
       <h2 style="margin-top:14px">Langues</h2>
-      <div class="lang-list">
-        <div class="lang-pill">🇫🇷 Français <span class="lvl">C2</span></div>
-        <div class="lang-pill">🇬🇧 Anglais <span class="lvl">C2</span></div>
-        <div class="lang-pill">🇹🇳 Arabe <span class="lvl">C2</span></div>
-        <div class="lang-pill">🇮🇹 Italien <span class="lvl b">B1</span></div>
-        <div class="lang-pill">🇯🇵 Japonais <span class="lvl a">A1</span></div>
-      </div>
+      <ul class="lang-list">
+        <li class="lang-pill">🇫🇷 Français <span class="lvl">C2</span></li>
+        <li class="lang-pill">🇬🇧 Anglais <span class="lvl">C2</span></li>
+        <li class="lang-pill">🇹🇳 Arabe <span class="lvl">C2</span></li>
+        <li class="lang-pill">🇮🇹 Italien <span class="lvl b">B1</span></li>
+        <li class="lang-pill">🇯🇵 Japonais <span class="lvl a">A1</span></li>
+      </ul>
 
-    </div>
-  </div>
+    </section>
+  </section>
 
-  <!-- FOOTER CERCLES -->
-  <div class="footer-rings">
+  <!-- ⭐⭐ FOOTER CERCLES ⭐⭐ -->
+  <footer class="footer-rings" aria-hidden="true">
     <svg width="80" height="55" viewBox="0 0 88 62" xmlns="http://www.w3.org/2000/svg">
       <circle cx="24" cy="31" r="22" fill="none" stroke="#8B3A2A" stroke-width="4.5"/>
       <circle cx="44" cy="31" r="22" fill="none" stroke="#C4903A" stroke-width="4.5"/>
       <circle cx="64" cy="31" r="22" fill="none" stroke="#A84D2F" stroke-width="4.5"/>
     </svg>
-  </div>
+  </footer>
 
-</div><!-- /page -->
+</main>
 
 <button class="print-btn no-print" onclick="window.print()">⬇ Télécharger en PDF</button>
 

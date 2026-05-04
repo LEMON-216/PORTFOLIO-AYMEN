@@ -1,4 +1,5 @@
-# Projet fil rouge — Portfolio
+
+# PROJET FIL ROUGE - PORTFOLIO
 
 Portfolio personnel de **Aymen Chaabane**, chef de projet digital & développeur web — réalisé dans le cadre de la formation Chef de Projet Digital (1ère année) FIM CCI Ouest Normandie, campus 2 - Saint-Lô.
 
@@ -8,7 +9,7 @@ Portfolio personnel de **Aymen Chaabane**, chef de projet digital & développeur
 
 ## Stack technique
 
-- **HTML5 / CSS3 / JavaScript** (vanilla, sans framework)
+- **HTML5 / CSS3 / JavaScript** (sans framework)
 - **Polices** : Arelv (titres), Satoshi (corps), Playfair Display + Inter (CVs)
 - **Multilingue** : FR / EN / AR / JA (sélecteur dynamique)
 - **Animations** : starfield Canvas, scroll reveal, curseur personnalisé
@@ -21,7 +22,6 @@ Portfolio personnel de **Aymen Chaabane**, chef de projet digital & développeur
 
 ## Structure des fichiers
 
-```
 PORTFOLIO/
 ├── index.html                              → Page d'accueil
 ├── projets.html                            → Liste des projets
@@ -53,7 +53,6 @@ PORTFOLIO/
             ├── portfolio/
             ├── recherche/
             └── secret/
-```
 
 ---
 
@@ -62,7 +61,7 @@ PORTFOLIO/
 Approche hybride : chaque CV est une **page HTML interactive** avec un bouton **« ⬇ Télécharger en PDF »** intégré qui déclenche `window.print()`. Le visiteur peut consulter en ligne ou télécharger.
 
 | CV | Format | Public cible | Particularité |
-|---|---|---|---|
+| ... |... | ... | ... |
 | **CV Graphique** | 1 page A3 paysage | Visiteurs / créatifs | Anneaux concentriques SVG · timeline circulaire |
 | **CV Digital** | 1 page A4 | Recruteurs digital / RH | Header bleu marine + photo · 14 logos tech officiels |
 | **CV Artistique** | 3 pages A4 | Milieu universitaire | Sidebar grise · publications, thèse, références |
@@ -84,7 +83,7 @@ git commit -m "le message"
 git push
 ```
 
-Chaque `push` sur la branche principale déclenche automatiquement un nouveau build Netlify (~30 s à 2 min).
+Chaque `push` sur la branche principale déclenche automatiquement un nouveau build Netlify (~30 s à 2 min pour le déploiement).
 
 ---
 

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //Animation du follower par interpolation linéaire (lerp) //
+    //Animation du follower par interpolation //
     function animateCursor() {
         const ease = 0.15;
         posX += (mouseX - posX) * ease;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             follower.style.left = `${posX}px`;
             follower.style.top = `${posY}px`;
         }
-        requestAnimationFrame(animateCursor); //Boucle perpetuelle synchronisée au rendu
+        requestAnimationFrame(animateCursor); //Boucle perpetuelle synchronisée avec le rendu
     }
     animateCursor();
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ⭐⭐ 2. MENU BURGER (mobile) ⭐⭐ //
+    // ⭐⭐ 2. MENU BURGER (sur mobile) ⭐⭐ //
     const burger = document.getElementById('burger');
     const navList = document.getElementById('nav-list');
 
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // ⭐⭐ 7. GALERIE ARTISTIQUE — CAROUSEL (Projet 4) ⭐⭐ //
+    // ⭐⭐ 7. GALERIE ARTISTIQUE - CAROUSEL (Projet 4) ⭐⭐ //
     const artisticWrapper = document.querySelector('.artistic-wrapper');
 
     if (artisticWrapper) {

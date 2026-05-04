@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>CV Artistique — Aymen Chaabane</title>
+<title>CV Artistique - Aymen Chaabane</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -47,7 +48,7 @@ body {
   grid-template-columns: 230px 1fr;
 }
 
-/* ── SIDEBAR ────────────────────────────────────────── */
+/* ⭐⭐ SIDEBAR ⭐⭐ */
 .sidebar {
   background: var(--cream-d);
   padding: 30px 22px;
@@ -109,7 +110,7 @@ body {
 .lang-row.b span:last-child { background: var(--gold); }
 .lang-row.a span:last-child { background: var(--sage); }
 
-/* ── MAIN CONTENT ───────────────────────────────────── */
+/* ⭐⭐ CONTENU PRINCIPAL ⭐⭐ */
 .main {
   padding: 30px 32px 24px;
 }
@@ -204,7 +205,7 @@ h2.section::after {
   hyphens: auto;
 }
 
-/* ── PUBLICATIONS ───────────────────────────────────── */
+/* ⭐⭐ PUBLICATIONS ⭐⭐ */
 .pub-section {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -220,7 +221,9 @@ h2.section::after {
   line-height: 1.3;
   letter-spacing: 2px;
 }
+/* 
 .pub-list { }
+*/
 .pub-item {
   font-size: 10px;
   color: var(--mid);
@@ -239,7 +242,7 @@ h2.section::after {
 .pub-date { font-weight: 700; color: var(--dark); }
 .pub-title { font-style: italic; color: var(--dark); }
 
-/* ── REFERENCES ─────────────────────────────────────── */
+/* ⭐⭐ RÉFERENCES ⭐⭐ */
 .ref-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -254,8 +257,8 @@ h2.section::after {
   background: var(--cream-d);
   border-radius: 4px;
   border-left: 3px solid var(--terra);
-  min-width: 0;            /* allows the card to shrink inside its grid cell */
-  overflow: hidden;        /* clips any rare overflow */
+  min-width: 0;
+  overflow: hidden;
 }
 .ref-name {
   font-family:'Playfair Display', serif;
@@ -273,12 +276,12 @@ h2.section::after {
   overflow-wrap: break-word;
 }
 .ref-line {
-  display: block;          /* stacked: label sur 1 ligne, valeur en dessous */
+  display: block;          /* label sur 1 ligne, valeur en dessous */
   font-size: 9px;
   margin-bottom: 3px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  word-break: break-all;   /* allows email/phone to wrap if needed */
+  word-break: break-all;   /* auotriser email/phone wrap si nécessaire */
 }
 .ref-line span:first-child {
   color: var(--dark);
@@ -292,14 +295,14 @@ h2.section::after {
   padding-left: 4px;
 }
 
-/* ── FOOTER RINGS ───────────────────────────────────── */
+/* ⭐⭐ FOOTER CERCLES ⭐⭐ */
 .footer-rings {
   position: absolute;
   bottom: 18px; left: 50%;
   transform: translateX(-50%);
 }
 
-/* ── PRINT BUTTON ───────────────────────────────────── */
+/* ⭐⭐ BUTTON IMPRIMER ⭐⭐ */
 .print-btn {
   position: fixed; bottom: 28px; right: 28px;
   background: var(--terra); color: var(--cream);
@@ -312,45 +315,44 @@ h2.section::after {
 }
 .print-btn:hover { background: var(--rust); }
 </style>
+
 </head>
 <body>
 
-<!-- ════════════════════════════════════════════════ -->
-<!-- PAGE 1                                            -->
-<!-- ════════════════════════════════════════════════ -->
-<div class="page">
+<!-- ⭐⭐ PAGE 1 ⭐⭐ -->
+<article class="page">
 
   <aside class="sidebar">
 
-    <div class="sb-block">
+    <section class="sb-block">
       <h3>Contact</h3>
-      <div class="sb-label">Adresse</div>
-      <div class="sb-text">1 rue Guy de Maupassant<br>50500 CARENTAN LES MARAIS<br>CARENTAN</div>
+      <address class="sb-text" style="font-style:normal;">
+        <p class="sb-label">
+        <p class="sb-label">E-mail</p>
+        chaabane.aymen1@gmail.com
 
-      <div class="sb-label">E-mail</div>
-      <div class="sb-text">chaabane.aymen1@gmail.com</div>
+        <p class="sb-label">Téléphones portables</p>
+        + 33 6 52 88 17 26
+      </address>
+    </section>
 
-      <div class="sb-label">Téléphones portables</div>
-      <div class="sb-text">+ 33 6 52 88 17 26</div>
-    </div>
-
-    <div class="sb-block">
+    <section class="sb-block">
       <h3>Permis de conduire</h3>
-      <div class="sb-text" style="margin-top:8px">B – Permis de conduire véhicule léger type B</div>
-    </div>
+      <p class="sb-text" style="margin-top:8px">B – Permis de conduire véhicule léger type B</p>
+    </section>
 
-    <div class="sb-block">
+    <section class="sb-block">
       <h3>Langues</h3>
-      <div style="margin-top:10px">
-        <div class="lang-row"><span>Français</span><span>Courant</span></div>
-        <div class="lang-row"><span>Anglais</span><span>Courant</span></div>
-        <div class="lang-row"><span>Arabe</span><span>Courant</span></div>
-        <div class="lang-row b"><span>Italien</span><span>Intermédiaire</span></div>
-        <div class="lang-row a"><span>Japonais</span><span>Débutant</span></div>
-      </div>
-    </div>
+      <ul style="margin-top:10px;list-style:none;padding:0;">
+        <li class="lang-row"><span>Français</span><span>Courant</span></li>
+        <li class="lang-row"><span>Anglais</span><span>Courant</span></li>
+        <li class="lang-row"><span>Arabe</span><span>Courant</span></li>
+        <li class="lang-row b"><span>Italien</span><span>Intermédiaire</span></li>
+        <li class="lang-row a"><span>Japonais</span><span>Débutant</span></li>
+      </ul>
+    </section>
 
-    <div class="sb-block">
+    <section class="sb-block">
       <h3>Centres d'intérêt</h3>
       <ul class="sb-list" style="margin-top:8px">
         <li>Arts du spectacle</li>
@@ -368,18 +370,18 @@ h2.section::after {
         <li>Cuisine</li>
         <li>Art martial (Tai-chi)</li>
       </ul>
-    </div>
+    </section>
 
   </aside>
 
-  <main class="main">
+  <section class="main">
 
-    <div class="name-block">
-      <div class="name-orange"></div>
+    <header class="name-block">
+      <div class="name-orange" aria-hidden="true"></div>
       <div class="name-text">
         <h1>Chaabane<span class="first">Aymen</span></h1>
       </div>
-    </div>
+    </header>
 
     <p class="intro">
       Après avoir obtenu un doctorat en Théâtre et Arts de la scène à l'Université de Franche-Comté, mon parcours universitaire se consacre à une approche anthropologique multidisciplinaire qui étudie l'humanité dans toute sa diversité. Mes travaux portent particulièrement, mais pas uniquement, sur les perspectives artistiques qui se manifestent dans les traditions des sociétés anciennes. Mes recherches actuelles se concentrent sur les pratiques cultuelles similaires entre l'Afrique du Nord, l'Afrique subsaharienne et le Japon et la convergence vers une possible inspiration des mêmes sources du « savoir ».
@@ -387,240 +389,236 @@ h2.section::after {
 
     <h2 class="section">Expériences</h2>
 
-    <div class="entry">
-      <div class="entry-date">06/2022<br>06/2024</div>
+    <article class="entry">
+      <p class="entry-date">06/2022<br>06/2024</p>
       <div class="entry-body">
-        <div class="entry-title">Chercheur Postdoctoral</div>
-        <div class="entry-place">Kyoto City University of Arts, Kyoto, Japon</div>
-        <div class="entry-desc">Chercheur postdoctoral en Arts et Anthropologie à l'Institut de Recherche sur la Musique Traditionnelle Japonaise RIJTM. Mes activités portent sur l'étude et la compréhension des formes performatives et artistiques de la société japonaise ancienne qui pratiquait le culte kagura dans sa forme « authentique ».</div>
+        <h3 class="entry-title">Chercheur Postdoctoral</h3>
+        <p class="entry-place">Kyoto City University of Arts, Kyoto, Japon</p>
+        <p class="entry-desc">Chercheur postdoctoral en Arts et Anthropologie à l'Institut de Recherche sur la Musique Traditionnelle Japonaise RIJTM. Mes activités portent sur l'étude et la compréhension des formes performatives et artistiques de la société japonaise ancienne qui pratiquait le culte kagura dans sa forme « authentique ».</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">10/2019<br>09/2021</div>
+    <article class="entry">
+      <p class="entry-date">10/2019<br>09/2021</p>
       <div class="entry-body">
-        <div class="entry-title">Assistant d'Éducation</div>
-        <div class="entry-place">Lycée de Thère, Saint-Lô, France</div>
-        <div class="entry-desc">Assistant d'éducation en charge d'activités éducatives, sportives, socio-culturelles, de l'intégration des élèves en situation de handicap ainsi que des diverses tâches administratives liées à la vie scolaire.</div>
+        <h3 class="entry-title">Assistant d'Éducation</h3>
+        <p class="entry-place">Lycée de Thère, Saint-Lô, France</p>
+        <p class="entry-desc">Assistant d'éducation en charge d'activités éducatives, sportives, socio-culturelles, de l'intégration des élèves en situation de handicap ainsi que des diverses tâches administratives liées à la vie scolaire.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">09/2013<br>09/2014</div>
+    <article class="entry">
+      <p class="entry-date">09/2013<br>09/2014</p>
       <div class="entry-body">
-        <div class="entry-title">Assistant d'Éducation</div>
-        <div class="entry-place">Collège César Franck, Paris 2, France</div>
-        <div class="entry-desc">En charge d'un atelier d'animation cinématographique et de réalisation de vidéos pédagogiques.</div>
+        <h3 class="entry-title">Assistant d'Éducation</h3>
+        <p class="entry-place">Collège César Franck, Paris 2, France</p>
+        <p class="entry-desc">En charge d'un atelier d'animation cinématographique et de réalisation de vidéos pédagogiques.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">01/2013<br>01/2014</div>
+    <article class="entry">
+      <p class="entry-date">01/2013<br>01/2014</p>
       <div class="entry-body">
-        <div class="entry-title">Metteur en Scène</div>
-        <div class="entry-place">Association Légion d'honneur, Saint-Denis, France</div>
-        <div class="entry-desc">Metteur en scène du spectacle « Cri » financé par l'association Légion d'honneur et joué dans le cadre d'un projet humanitaire, Saint-Denis, France.</div>
+        <h3 class="entry-title">Metteur en Scène</h3>
+        <p class="entry-place">Association Légion d'honneur, Saint-Denis, France</p>
+        <p class="entry-desc">Metteur en scène du spectacle « Cri » financé par l'association Légion d'honneur et joué dans le cadre d'un projet humanitaire, Saint-Denis, France.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">10/2009<br>11/2010</div>
+    <article class="entry">
+      <p class="entry-date">10/2009<br>11/2010</p>
       <div class="entry-body">
-        <div class="entry-title">Comédien</div>
-        <div class="entry-place">Journées Théâtrales de Carthage (JTC), Tunis, Tunisie</div>
-        <div class="entry-desc">Comédien du spectacle « WAW » mis en scène par Fathi AKKARI et joué pendant les Journées Théâtrales de Carthage (JTC) à Tunis, Tunisie.</div>
+        <h3 class="entry-title">Comédien</h3>
+        <p class="entry-place">Journées Théâtrales de Carthage (JTC), Tunis, Tunisie</p>
+        <p class="entry-desc">Comédien du spectacle « WAW » mis en scène par Fathi AKKARI et joué pendant les Journées Théâtrales de Carthage (JTC) à Tunis, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">09/2009<br>08/2010</div>
+    <article class="entry">
+      <p class="entry-date">09/2009<br>08/2010</p>
       <div class="entry-body">
-        <div class="entry-title">Metteur en Scène</div>
-        <div class="entry-place">Institut Supérieur d'Art Dramatique ISAD, Tunis, Tunisie</div>
-        <div class="entry-desc">Metteur en scène et comédien du spectacle « Trou » joué dans le cadre des Journées Théâtrales de l'Institut Supérieur d'Art Dramatique (ISAD) de Tunis, Tunisie.</div>
+        <h3 class="entry-title">Metteur en Scène</h3>
+        <p class="entry-place">Institut Supérieur d'Art Dramatique ISAD, Tunis, Tunisie</p>
+        <p class="entry-desc">Metteur en scène et comédien du spectacle « Trou » joué dans le cadre des Journées Théâtrales de l'Institut Supérieur d'Art Dramatique (ISAD) de Tunis, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">11/2009<br>12/2009</div>
+    <article class="entry">
+      <p class="entry-date">11/2009<br>12/2009</p>
       <div class="entry-body">
-        <div class="entry-title">Stagiaire</div>
-        <div class="entry-place">Festival international de Théâtre Néapolis, Nabeul, Tunisie</div>
-        <div class="entry-desc">Stage « Le masque neutre » réalisé au cours du festival international de Théâtre Néapolis, Nabeul, Tunisie.</div>
+        <h3 class="entry-title">Stagiaire</h3>
+        <p class="entry-place">Festival international de Théâtre Néapolis, Nabeul, Tunisie</p>
+        <p class="entry-desc">Stage « Le masque neutre » réalisé au cours du festival international de Théâtre Néapolis, Nabeul, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
-  </main>
-</div>
+  </section>
+</article>
 
-<!-- ════════════════════════════════════════════════ -->
-<!-- PAGE 2                                            -->
-<!-- ════════════════════════════════════════════════ -->
-<div class="page">
+<!-- ⭐⭐ PAGE 2 ⭐⭐ -->
+<article class="page">
 
   <aside class="sidebar"></aside>
 
-  <main class="main">
+  <section class="main">
 
-    <div class="entry">
-      <div class="entry-date">11/2008<br>12/2008</div>
+    <article class="entry">
+      <p class="entry-date">11/2008<br>12/2008</p>
       <div class="entry-body">
-        <div class="entry-title">Stagiaire</div>
-        <div class="entry-place">Festival international de Théâtre Néapolis, Nabeul, Tunisie</div>
-        <div class="entry-desc">Stage « Les Grands styles : Molière » réalisé au cours du festival international de Théâtre Néapolis qui s'est déroulé à Nabeul, Tunisie.</div>
+        <h3 class="entry-title">Stagiaire</h3>
+        <p class="entry-place">Festival international de Théâtre Néapolis, Nabeul, Tunisie</p>
+        <p class="entry-desc">Stage « Les Grands styles : Molière » réalisé au cours du festival international de Théâtre Néapolis qui s'est déroulé à Nabeul, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">05/2007<br>10/2008</div>
+    <article class="entry">
+      <p class="entry-date">05/2007<br>10/2008</p>
       <div class="entry-body">
-        <div class="entry-title">Acteur</div>
-        <div class="entry-place">Société cinématographique « Nouveau film », Tunis, Tunisie</div>
-        <div class="entry-desc">Acteur dans le film historique « TRENTE » de Fadhel JAZIRI, tourné à Tunis, Tunisie.</div>
+        <h3 class="entry-title">Acteur</h3>
+        <p class="entry-place">Société cinématographique « Nouveau film », Tunis, Tunisie</p>
+        <p class="entry-desc">Acteur dans le film historique « TRENTE » de Fadhel JAZIRI, tourné à Tunis, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">07/2007<br>07/2007</div>
+    <article class="entry">
+      <p class="entry-date">07/2007<br>07/2007</p>
       <div class="entry-body">
-        <div class="entry-title">Stagiaire</div>
-        <div class="entry-place">Festival d'Avignon, Avignon, France</div>
-        <div class="entry-desc">Stage « Pantomime Contemporaine » réalisé dans le cadre d'une Coopération Artistique Internationale pendant le festival d'Avignon, France.</div>
+        <h3 class="entry-title">Stagiaire</h3>
+        <p class="entry-place">Festival d'Avignon, Avignon, France</p>
+        <p class="entry-desc">Stage « Pantomime Contemporaine » réalisé dans le cadre d'une Coopération Artistique Internationale pendant le festival d'Avignon, France.</p>
       </div>
-    </div>
+    </article>
 
     <h2 class="section">Qualifications</h2>
 
-    <div class="entry">
-      <div class="entry-date">11/2020</div>
+    <article class="entry">
+      <p class="entry-date">11/2020</p>
       <div class="entry-body">
-        <div class="entry-title">Doctorat</div>
-        <div class="entry-desc">Diplôme de doctorat en <em>Théâtre et Arts de la Scène</em> obtenu à l'Université de Franche-Comté, Unité de Recherche ELLIADD, École Doctorale LECLA, Besançon, France.</div>
+        <h3 class="entry-title">Doctorat</h3>
+        <p class="entry-desc">Diplôme de doctorat en <em>Théâtre et Arts de la Scène</em> obtenu à l'Université de Franche-Comté, Unité de Recherche ELLIADD, École Doctorale LECLA, Besançon, France.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">09/2015</div>
+    <article class="entry">
+      <p class="entry-date">09/2015</p>
       <div class="entry-body">
-        <div class="entry-title">Master</div>
-        <div class="entry-desc">Diplôme de Master en <em>Arts du spectacle – Arts de la scène</em>, spécialité <em>Études Théâtrales</em>, obtenu à l'Université Paris 8, Saint-Denis, France.</div>
+        <h3 class="entry-title">Master</h3>
+        <p class="entry-desc">Diplôme de Master en <em>Arts du spectacle – Arts de la scène</em>, spécialité <em>Études Théâtrales</em>, obtenu à l'Université Paris 8, Saint-Denis, France.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">06/2010</div>
+    <article class="entry">
+      <p class="entry-date">06/2010</p>
       <div class="entry-body">
-        <div class="entry-title">Maîtrise</div>
-        <div class="entry-desc">Diplôme de Maîtrise en <em>Études Théâtrales</em>, spécialité <em>Mise en scène et formation de l'acteur</em>, obtenu à l'Institut Supérieur d'Art Dramatique ISAD, Tunis, Tunisie.</div>
+        <h3 class="entry-title">Maîtrise</h3>
+        <p class="entry-desc">Diplôme de Maîtrise en <em>Études Théâtrales</em>, spécialité <em>Mise en scène et formation de l'acteur</em>, obtenu à l'Institut Supérieur d'Art Dramatique ISAD, Tunis, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="entry">
-      <div class="entry-date">06/2006</div>
+    <article class="entry">
+      <p class="entry-date">06/2006</p>
       <div class="entry-body">
-        <div class="entry-title">Baccalauréat</div>
-        <div class="entry-desc">Diplôme de Baccalauréat en <em>Économie et Gestion</em> obtenu au Lycée Pilote des Arts, Tunis, Tunisie.</div>
+        <h3 class="entry-title">Baccalauréat</h3>
+        <p class="entry-desc">Diplôme de Baccalauréat en <em>Économie et Gestion</em> obtenu au Lycée Pilote des Arts, Tunis, Tunisie.</p>
       </div>
-    </div>
+    </article>
 
     <h2 class="section">Contacts de référence</h2>
 
-    <div class="ref-list">
-      <div class="ref-card">
-        <div class="ref-name">FUJITA Takanori</div>
-        <div class="ref-org">Kyoto City University of Arts</div>
-        <div class="ref-line"><span>E-mail :</span><span>tfujita@kcua.ac.jp</span></div>
-        <div class="ref-line"><span>Téléphone :</span><span>+81 90-6053-2618</span></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-name">FREIXE Guy</div>
-        <div class="ref-org">Université de Franche-Comté</div>
-        <div class="ref-line"><span>E-mail :</span><span>guy.freixe@gmail.com</span></div>
-        <div class="ref-line"><span>Téléphone :</span><span>+33 6 03 46 23 08</span></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-name">SAITO Kei</div>
-        <div class="ref-org">Kyoto City University of Arts</div>
-        <div class="ref-line"><span>E-mail :</span><span>ke-saito@kcua.ac.jp</span></div>
-        <div class="ref-line"><span>Téléphone :</span><span>+81 90-9163-1930</span></div>
-      </div>
-    </div>
+    <section class="ref-list">
+      <article class="ref-card">
+        <h3 class="ref-name">FUJITA Takanori</h3>
+        <p class="ref-org">Kyoto City University of Arts</p>
+        <address class="ref-line" style="font-style:normal;"><span>E-mail :</span><span>tfujita@kcua.ac.jp</span></address>
+        <address class="ref-line" style="font-style:normal;"><span>Téléphone :</span><span>+81 90-6053-2618</span></address>
+      </article>
+      <article class="ref-card">
+        <h3 class="ref-name">FREIXE Guy</h3>
+        <p class="ref-org">Université de Franche-Comté</p>
+        <address class="ref-line" style="font-style:normal;"><span>E-mail :</span><span>guy.freixe@gmail.com</span></address>
+        <address class="ref-line" style="font-style:normal;"><span>Téléphone :</span><span>+33 6 03 46 23 08</span></address>
+      </article>
+      <article class="ref-card">
+        <h3 class="ref-name">SAITO Kei</h3>
+        <p class="ref-org">Kyoto City University of Arts</p>
+        <address class="ref-line" style="font-style:normal;"><span>E-mail :</span><span>ke-saito@kcua.ac.jp</span></address>
+        <address class="ref-line" style="font-style:normal;"><span>Téléphone :</span><span>+81 90-9163-1930</span></address>
+      </article>
+    </section>
 
-  </main>
-</div>
+  </section>
+</article>
 
-<!-- ════════════════════════════════════════════════ -->
-<!-- PAGE 3                                            -->
-<!-- ════════════════════════════════════════════════ -->
-<div class="page">
+<!-- ⭐⭐ PAGE 3 ⭐⭐ -->
+<article class="page">
 
   <aside class="sidebar"></aside>
 
-  <main class="main">
+  <section class="main">
 
     <h2 class="section" style="margin-top:0">Liste de réalisations</h2>
 
-    <div class="pub-section">
-      <div class="pub-label">Événements scientifiques organisés</div>
+    <section class="pub-section">
+      <h3 class="pub-label">Événements scientifiques organisés</h3>
       <div class="pub-list">
-        <div class="pub-item">
+        <article class="pub-item">
           <span class="pub-date">10/2023 –</span> <span class="pub-title">Stage Approche du jeu masqué et atelier de fabrications de masques</span>, organisé du 23 au 26 octobre 2023 à Kyoto City University of Arts (Japon). Formation de quatre jours assurée par les professeurs Guy FREIXE et Bruno BOTELLA, ayant pour objectif de préparer le corps au jeu masqué et d'analyser les lois du mouvement à travers la découverte du masque neutre, accompagnée d'un atelier de fabrication de masques selon les techniques japonaises anciennes.
-        </div>
-        <div class="pub-item">
+        </article>
+        <article class="pub-item">
           <span class="pub-date">03/2023 –</span> <span class="pub-title">Between bori and kagura, réflexion ethnomusicologie et approche scénique</span>, organisé à Kyoto City University of Arts (Japon). Conférence-Concert autour d'une approche pluridisciplinaire entre le <em>bori</em> (culte traditionnel hausa en Afrique subsaharienne) et <em>kagura</em> (culte traditionnel japonais).
-        </div>
-        <div class="pub-item">
+        </article>
+        <article class="pub-item">
           <span class="pub-date">02/2019 –</span> <span class="pub-title">Le stambali en Tunisie : Transe rituelle ou performance théâtrale ?</span>, journée d'étude organisée à l'Université de Besançon, réflexions artistiques sur le « spectaculaire » dans les pratiques rituelles maghrébines.
-        </div>
-        <div class="pub-item">
+        </article>
+        <article class="pub-item">
           <span class="pub-date">11/2017 –</span> <span class="pub-title">Routes and Roots</span>, séminaire à l'Université de Tsukuba (Japon) autour de la « réflexion sur l'influence musicale et le processus de ré-écriture de l'identité ».
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="pub-section" style="margin-top:24px">
-      <div class="pub-label">Thèse &amp; mémoires écrites</div>
+    <section class="pub-section" style="margin-top:24px">
+      <h3 class="pub-label">Thèse &amp; mémoires écrites</h3>
       <div class="pub-list">
-        <div class="pub-label" style="font-size:10.5px;margin-bottom:6px;letter-spacing:1px;">Thèse de doctorat</div>
-        <div class="pub-item">
+        <h4 class="pub-label" style="font-size:10.5px;margin-bottom:6px;letter-spacing:1px;">Thèse de doctorat</h4>
+        <article class="pub-item">
           <span class="pub-date">2020 –</span> <span class="pub-title">Les formes spectaculaires des cultes religieux au Maghreb : le cas du stambali en Tunisie, ou comment faire d'une pratique rituelle une tradition théâtrale</span>, Thèse rédigée à l'Université de Franche-Comté, Besançon, France.
-        </div>
-        <div class="pub-label" style="font-size:10.5px;margin:10px 0 6px;letter-spacing:1px;">Mémoire de master</div>
-        <div class="pub-item">
+        </article>
+        <h4 class="pub-label" style="font-size:10.5px;margin:10px 0 6px;letter-spacing:1px;">Mémoire de master</h4>
+        <article class="pub-item">
           <span class="pub-date">2015 –</span> <span class="pub-title">L'acteur, son masque et son texte</span>, mémoire de Master en Arts du Spectacle, spécialité Études théâtrales, Université Paris 8.
-        </div>
-        <div class="pub-item">
+        </article>
+        <article class="pub-item">
           <span class="pub-date">2010 –</span> <span class="pub-title">Le projet Trou</span>, mémoire de Maîtrise en Études théâtrales, spécialité Mise en scène, ISAD Tunis.
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="pub-section" style="margin-top:24px">
-      <div class="pub-label">Liste de publications</div>
+    <section class="pub-section" style="margin-top:24px">
+      <h3 class="pub-label">Liste de publications</h3>
       <div class="pub-list">
-        <div class="pub-item">
+        <article class="pub-item">
           <span class="pub-date">2020 –</span> Aymen Chaabane, <span class="pub-title">« Le rituel et l'enjeu théâtral du corps au Maghreb : entre divinité et sexualité »</span>, Éditions <em>Les chantiers de la création</em> N° 12, Aix-en-Provence, avril 2020.
-        </div>
-        <div class="pub-item">
+        </article>
+        <article class="pub-item">
           <span class="pub-date">2024 –</span> Aymen Chaabane, <span class="pub-title">« Between bori and kagura : Dialectic of Reconciliation : the theatrical and performance aspects in traditional societies in sub-Saharan Africa and Japan »</span>, publications à venir chez <em>Japan Review</em>.
-        </div>
-        <div class="pub-item">
+        </article>
+        <article class="pub-item">
           <span class="pub-date">2024 –</span> Aymen Chaabane, <span class="pub-title">Les formes spectaculaires des cultes religieux au Maghreb : le cas du stambali en Tunisie, ou comment transformer une pratique rituelle en tradition théâtrale</span>, publications sous forme d'ouvrage à venir (décembre 2024 chez <em>Deuxième Époque</em>).
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <!-- Decorative footer cercles -->
-    <div class="footer-rings">
+    <!-- ⭐⭐ FOOTER CERCLES ⭐⭐ -->
+    <footer class="footer-rings" aria-hidden="true">
       <svg width="80" height="55" viewBox="0 0 88 62" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="31" r="22" fill="none" stroke="#8B3A2A" stroke-width="4.5"/>
         <circle cx="44" cy="31" r="22" fill="none" stroke="#C4903A" stroke-width="4.5"/>
         <circle cx="64" cy="31" r="22" fill="none" stroke="#A84D2F" stroke-width="4.5"/>
       </svg>
-    </div>
+    </footer>
 
-  </main>
-</div>
+  </section>
+</article>
 
 <button class="print-btn no-print" onclick="window.print()">⬇ Télécharger en PDF</button>
 

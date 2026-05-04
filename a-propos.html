@@ -22,14 +22,14 @@
 
 <body>
 
-    <!-- Curseur personnalisé point blanc centré sur la souris + anneau plus grand avec un léger retard [effet "lag"] (desktop uniquement - masqué sur mobile par le CSS) -->
+    <!-- ⭐⭐ Curseur personnalisé point blanc centré sur la souris + anneau plus grand avec un léger retard (accueil uniquement - masqué sur mobile par le CSS) ⭐⭐ -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <!-- DOM harmonisé avec index.html = logo + burger + langue + liens -->
+    <!-- ⭐⭐ DOM harmonisé avec index.html = logo + burger + langue + liens ⭐⭐ -->
     <nav aria-label="Navigation principale">
 
-        <!-- Zone logo : lien de retour vers l'accueil -->
+        <!-- ⭐⭐ Zone logo : lien de retour vers l'accueil ⭐⭐ -->
         <div class="logo">
             <a href="./index.html" data-i18n="nav_back">Retour</a>
         </div>
@@ -41,7 +41,7 @@
             <span class="bar"></span>
         </div>
 
-        <!-- Sélecteur de langue -->
+        <!-- ⭐⭐ Sélecteur de langue ⭐⭐ -->
         <div class="lang-switcher">
 
             <button class="lang-btn" data-lang="fr" title="Français">
@@ -79,7 +79,7 @@
 
         </div>
 
-        <!-- Liens principaux -->
+        <!-- ⭐⭐ Liens principaux ⭐⭐ -->
         <ul class="nav-links" id="nav-list">
             <li><a href="./projets.html" data-i18n="nav_projects">Projets</a></li>
 
@@ -90,7 +90,7 @@
 
     </nav>
 
-    <!-- Section À Propos -->
+    <!-- ⭐⭐ Section À Propos ⭐⭐ -->
     <main class="about-section">
         <h1 class="about-title">
             <span data-i18n="about_title1">Passionné par le</span><br>
@@ -106,22 +106,22 @@
             expériences numériques pensées pour l'utilisateur.
         </p>
 
-        <!-- Boutons de téléchargement des CV -->
-        <div class="cv-buttons">
+        <!-- ⭐⭐ Boutons d'accès aux 3 CVs ⭐⭐ -->
+        <div class="cv-buttons" role="navigation" aria-label="Accès aux CVs">
 
-            <!-- CV Artistique : page HTML interactive avec bouton "Télécharger en PDF" -->
+            <!-- CV Artistique : page HTML interactive avec bouton Télécharger en PDF -->
             <a href="./CV_Aymen_Chaabane_Artistique.html" target="_blank" rel="noopener" class="submit-btn">
                 <i class="fas fa-arrow-up-right-from-square"></i>
                 <span data-i18n="about_cv_artistic">CV Artistique</span>
             </a>
 
-            <!-- CV Digital : page HTML interactive avec bouton "Télécharger en PDF" -->
+            <!-- CV Digital : page HTML interactive avec bouton Télécharger en PDF -->
             <a href="./CV_Aymen_Chaabane_Digital.html" target="_blank" rel="noopener" class="submit-btn">
                 <i class="fas fa-arrow-up-right-from-square"></i>
                 <span data-i18n="about_cv_digital">CV Digital</span>
             </a>
 
-            <!-- CV Graphique : page HTML interactive avec bouton "Télécharger en PDF" -->
+            <!-- CV Graphique : page HTML interactive avec bouton Télécharger en PDF -->
             <a href="./CV_Aymen_Chaabane_Graphique.html" target="_blank" rel="noopener" class="submit-btn">
                 <i class="fas fa-arrow-up-right-from-square"></i>
                 <span data-i18n="about_cv_graphic">CV Graphique</span>
@@ -131,14 +131,14 @@
 
     </main>
 
-    <!-- Scripts : ordre obligatoire (translations -> lang -> script) -->
+    <!-- Scripts : ordre obligatoire :traduction -> lang -> script -->
     <script src="./public/js/translations.js"></script>
     <script src="./public/js/lang.js"></script>
     <script src="./public/js/script.js"></script>
 
 
     <!-- Bannière de consentement cookies (RGPD) -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
+    <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
         <div class="cookie-content">
             <h2 id="cookie-title" class="cookie-title">Cookies & confidentialité</h2>
             <p class="cookie-text">
@@ -151,9 +151,9 @@
                 <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Accepter</button>
             </div>
         </div>
-    </div>
+    </aside>
 
-    <!-- Lien discret pour modifier son choix -->
+    <!-- ⭐⭐ Lien pour modifier le choix ⭐⭐ -->
     <button id="cookie-settings" class="cookie-settings" aria-label="Modifier mes préférences cookies" hidden>
         🍪 Cookies
     </button>

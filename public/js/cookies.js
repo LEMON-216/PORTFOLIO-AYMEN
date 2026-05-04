@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ⚠️ ID GOOGLE ANALYTICS //
+    // ID GOOGLE ANALYTICS //
     const GA_ID = 'G-KXGTEDMLLJ';
 
     const banner = document.getElementById('cookie-banner');

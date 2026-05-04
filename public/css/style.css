@@ -1,4 +1,4 @@
-/* ⭐⭐⭐⭐ Feuille de styles principale du portfolio ⭐⭐⭐⭐ */
+/* ⭐⭐⭐⭐ FEUILLE DE STYLES PRINCIPALE DU PORTFOLIO ⭐⭐⭐⭐ */
 
 /* ⭐⭐ 1. VARIABLES CSS GLOBALES (:root) ⭐⭐ */
 :root {
@@ -77,7 +77,7 @@
   font-display: swap;
 }
 
-/* ⭐⭐ 3. RESET & BASE ⭐⭐ */
+/* ⭐⭐ 3. LES BASES ⭐⭐ */
 
 /* Reset universel : supprime marges/paddings natifs des navigateurs */
 * {
@@ -88,11 +88,11 @@
 
 @media (hover: hover) and (pointer: fine) {
   * {
-    cursor: none; /* Remplacé par le curseur personnalisé JS */
+    cursor: none; /* remplacé par le curseur personnalisé .JS */
   }
 }
 
-/* masque les éléments du curseur personnalisé (inutiles au toucher) */
+/* masque les éléments du curseur personnalisé */
 @media (hover: none) {
   .cursor,
   .cursor-follower {
@@ -104,7 +104,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-light);
   font-family: var(--font-body);
-  overflow-x: hidden; /* Empêche le scroll horizontal (débordements) */
+  overflow-x: hidden; /* Empêche le scroll horizontal (débordement) */
   line-height: 1.6;
 }
 
@@ -132,7 +132,7 @@ a {
 .logo img {
   height: 40px;
   width: auto;
-  /* filter: brightness(0) invert(1);  Enlever le filtre sur logo afin d'éviter de rendre l'image entièrement blanche */
+  /* TODO filter: brightness(0) invert(1);  Enlever le filtre sur logo afin d'éviter de rendre l'image entièrement blanche */
   transition: opacity 0.3s;
   display: block;
 }
@@ -142,7 +142,7 @@ a {
   opacity: 0.7;
 }
 
-/* Hover sur le lien texte "Retour" */
+/* Hover sur le lien texte Retour */
 .logo a:hover {
   opacity: 0.7;
 }
@@ -219,7 +219,7 @@ nav {
   opacity: 1;
 }
 
-/* ⭐⭐ 7. SÉLECTEUR DE LANGUE ⭐⭐ */
+/* ⭐⭐ 7. SÉLECTEUR DE LANGUES ⭐⭐ */
 .lang-switcher {
   display: flex;
   align-items: center;
@@ -255,7 +255,7 @@ nav {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Survol */
+/* Au survol */
 .lang-btn:hover {
   opacity: 0.85;
 }
@@ -296,7 +296,7 @@ nav {
   pointer-events: none;
 }
 
-/* ⭐⭐ 9. PAGES SECONDAIRES - structure générale ⭐⭐ */
+/* ⭐⭐ 9. PAGES SECONDAIRES - STUCTURE GÉNÉRALE ⭐⭐ */
 
 /* Pages secondaires: Projets, Contact) */
 .page-title {
@@ -334,7 +334,7 @@ main {
   color: #888;
 }
 
-/* Mots mis en valeur dans le texte 
+/* TODO Mots mis en valeur dans le texte 
 .about-content span {
   color: #fff;
 }
@@ -423,7 +423,7 @@ main {
   transition: opacity 0.4s ease;
 }
 
-/* Classe ajoutée par JS pour afficher et activer l'overlay */
+/* Classe ajoutée par JavaScript pour afficher et activer l'overlay */
 .project-overlay.active {
   opacity: 1;
   pointer-events: all;
@@ -531,7 +531,7 @@ textarea {
   resize: none;
 }
 
-/* Bouton d'envoi */
+/* Bouton d'envoi (page Contact)*/
 .submit-btn {
   align-self: flex-start;
   background: transparent;
@@ -545,14 +545,14 @@ textarea {
   transition: 0.4s;
 }
 
-/* Survol : fond blanc, texte noir */
+/* Survol : fond blanc + texte noir */
 .submit-btn:hover {
   background: #fff;
   color: #000;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Boutons CV (page À Propos) */
+/* Boutons CVs (page A-Propos) */
 .cv-buttons {
   margin-top: 3rem;
   display: flex;
@@ -647,7 +647,7 @@ footer {
   direction: rtl;
 }
 
-/* Logo passe à droite en RTL ( à corriger)
+/* TODO Logo passe à droite en RTL ( à corriger)
 [dir="rtl"] .logo {
   grid-column: 3;
   justify-self: end;
